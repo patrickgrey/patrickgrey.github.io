@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: case-study | ]]></title>
+  <link href="/blog/categories/case-study/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-23T21:46:02+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: PatrickGrey.co.uk]]></title>
+    <link href="/blog/case-study/2014/01/11/case-website-patrickgrey.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/2014/01/11/case-website-patrickgrey</id>
+    <content type="html"><![CDATA[<p>I built version 1.0 of this website (you are looking at v2.0) trying to follow the tidal wave of new best practices I had read about over the last couple of years. Once finished, I hated it!</p>
+
+<p>When building v2.0, I tried to rectify many of the mistakes I think I made and I&#39;m actually very happy with the result. I hope you are too!</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-website-patrick-grey.jpg" alt="Screenshot of the PatrickGrey.co.uk website." style="max-width:255px;">
+  <figcaption>Screenshot of the PatrickGrey.co.uk version 1.0.</figcaption>
+</figure>
+
+<p>In v1.0 I focused too much on trying to get everything to fit in a mobile view without the need to scroll. This was a fundamental flaw. I also loved the idea of using animated SVG (I still do, it just makes sense) but I had to spend a lot of time trying to get it to work cross-browser.</p>
+
+<p>Finally on v1.0, my approach wasn&#39;t structured enough. I was trying to take an overview and implement features to fit into that view. Instead, I should have taken a more task driven approach and focused on each feature at a time.</p>
+
+<p>For v2.0 I took it all back to basics and built it up with very simple aims. The current approach is to add small features to enhance the site as I get time.</p>
+
+<p>I will write some follow-up posts to this one going into more technical detail of how I achieved some aspects of the design.</p>
+
+<h3>Needs Analysis</h3>
+
+<p>My main aim for the site is to help me get work. If a visitor asks, &quot;What can this person do for me?&quot;, I want them to find the answer quickly.</p>
+
+<p>For design and build, I had the following goals:</p>
+
+<ul>
+<li>I wanted a clean and clear design and layout.</li>
+<li>The site should be responsive</li>
+<li>I focused on performance. The site should load very quickly.</li>
+<li>It should be quick to build and easy to maintain.</li>
+</ul>
+
+<h3>Design</h3>
+
+<p>I started by redesigning my logo. I wanted something to reflect my design approach; clean, balanced colour and a good use of white space. I used the colours in the logo to reflect each section of the site.</p>
+
+<p>I reused the raindrop, which sounds better than drip ;-), motif throughout the rest of the design.</p>
+
+<p>It is a &#39;Flat&#39; design. This appeals to me as it increases the importance of white space and helps cut out design aspects that may impact browser performance (such as large drop shadows).</p>
+
+<p>I tried to keep the text content as minimal as possible. This really focused my mind on what I wanted to say.</p>
+
+<h3>Technical</h3>
+
+<p>The site was scaffolded and tested using  <a href="http://www.Yeoman.io" title="Open the Yeoman.io website in a new window." target="_blank">Yeoman.io</a>, an excellent set of workflow tools.</p>
+
+<p>The pages are created with the <a href="http://jekyllrb.com/" title="Open the jekyllrb.com website in a new window." target="_blank">http://jekyllrb.com/</a> static site generator.</p>
+
+<p>I used the <a href="https://github.com/robwierzbowski/generator-jekyllrb" title="Open the jgenerator-jekyllrb website in a new window." target="_blank">generator-jekyllrb</a> Yeoman generator to get started.</p>
+
+<p>Styles were preprocessed using SASS. Icons and the logo are SVG with a PNG fallback for IE8.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: JockGordon.co.uk]]></title>
+    <link href="/blog/case-study/2014/01/11/case-website-jock-gordon.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/2014/01/11/case-website-jock-gordon</id>
+    <content type="html"><![CDATA[<p>This was a small static site that Jock asked me to build to promote his architectural drawing business on the Island of Skye.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-website-jock-gordon.jpg" alt="Screenshot of the JockGordon.co.uk website." style="max-width:700px;">
+  <figcaption>Screenshot of the JockGordon.co.uk website.</figcaption>
+</figure>
+
+<p>You can visit <a href="http://www.jockgordon.co.uk" title="Open the jockgordon.co.uk website in a new window." target="_blank">jockgordon.co.uk here</a>.</p>
+
+<p>Jock wanted a simple site that would require minimal maintenance so I put most of my effort into the visual design. The design aims to reflect the high quality of his designs and emphasize his use of modern materials in an ancient landscape.</p>
+
+<p>It was also important the site would have a high search ranking when people were looking for building design services on Skye. The site has had a top two placing, most commonly first, for a number of years.</p>
+
+<blockquote>
+<p>&#8220;Patrick couldn&#39;t have been more helpful. He explained everything in a way I could understand and provided lots of advice.
+I&#39;m delighted with the site and it has helped my business with a high search engine ranking.&#8221;</p>
+
+<p>Jock Gordon</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: BarnesTennisClub.co.uk]]></title>
+    <link href="/blog/case-study/2014/01/11/case-website-barnes-tennis-club.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/2014/01/11/case-website-barnes-tennis-club</id>
+    <content type="html"><![CDATA[<p>This was a Wordpress site project for a community tennis club in London.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-website-barnes-tennis.jpg" alt="Screenshot of the BarnesTennisClub.co.uk website." style="max-width:476px;">
+  <figcaption>Screenshot of the JockGordon.co.uk website viewed on a mobile device.</figcaption>
+</figure>
+
+<p>You can visit <a href="http://www.barnestennisclub.co.uk" title="Open the BarnesTennisClub.co.uk website in a new window." target="_blank">BarnesTennisClub.co.uk here</a>.</p>
+
+<p>The client wasn&#39;t sure what could be done with a website so I guided them through target audience considerations, the benefits of responsive design and maintenance using a Content Management System. I worked closely with them on the design, social media usage and provided training for the site administrator.</p>
+
+<p>The club has been successfully updating the site themselves since 2012, even creating micro sites aimed at one off events.</p>
+
+<p>The client was so happy with the work, I received a cracking bottle of Oban Malt :-)</p>
+
+<blockquote>
+<p>&#8220;We are thrilled with the new look and style...
+Thank you for all your time spent on this and I&#39;m sure our Club will prosper as a direct result due to all the new members we will attract.</p>
+
+<p>Best wishes,</p>
+
+<p>Jane Bonner,</p>
+
+<p>Chairman.&#8221;</p>
+</blockquote>
+
+<h3>Technical</h3>
+
+<p>I used <a href="http://www.wordpress.org" title="Open the wordpress.org website in a new window." target="_blank">wordpress.org</a> as the Content Management System and the <a href="http://cyberchimps.com/responsive-theme/" title="Open the Cyber Chimps website in a new window." target="_blank">Responsive Theme</a> from Cyber Chimps which I modified with custom CSS and JavaScript.</p>
+
+<p>The theme will work on mobile devices, tablets and desktops.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Say Again?]]></title>
+    <link href="/blog/case-study/2014/01/11/case-phr.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/2014/01/11/case-phr</id>
+    <content type="html"><![CDATA[<p>Air Traffic Control and Pilots use pre-defined phrases when communicating to ensure clarity. Eurocontrol had a database application that could act as a reference for these phrases but they wanted to modernise the technologies used and improve the administration process.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-phr.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0." style="max-width:653px;">
+  <figcaption>Screenshot of the Say Again? Database Application v2.0.</figcaption>
+</figure>
+
+<p>You can view the current version at: <a href="http://contentzone.eurocontrol.int/Phraseology/" title="Open the Say Again? application in a new Window." target="_blank">http://contentzone.eurocontrol.int/Phraseology/</a></p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-phrm.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0 at a small screen resolution." style="max-width:436px;">
+  <figcaption>Screenshot of the same Application on a small screen.</figcaption>
+</figure>
+
+<h3>Spec</h3>
+
+<p>Eurocontrol asked me to redesign the application to improve the User Experience and administrative process.</p>
+
+<p>Making updates to the database involved the Subject Matter Expert (SME) making changes to an Excel spreadsheet and uploading it via a web page. The database was then destroyed and rebuilt using that data. As well as being a clumsy interface to use, it left user input unchecked and prone to errors.</p>
+
+<p>I was asked to create the technical spec for review but the final product should work in IE8 on XP as a minimum.</p>
+
+<h3>Solution</h3>
+
+<p>Each Phrase could belong to two groupings called &quot;Categories&quot; and &quot;Contexts&quot;. There are fairly complicated relationships between the groups and Phrases. The existing application did these calculations on the server side by querying the database. This was logical as the relationships are already established there.</p>
+
+<p>However, this resulted in a round trip to the server each time a user wanted to refine a grouping filter. Users would typically make several selections and the trips to the server could really slow things down.</p>
+
+<p>I decided to move the filtering calculation to the client-side, using custom JavaScript and JSON models to recreate the relationships. This meant that filtering would occur instantly so that users could quickly find the Phrase(s) they would looking for.</p>
+
+<p>The application was built using a responsive approach (meaning it will work as well on mobile devices as desktop computers) so that there would be only one code base to maintain.</p>
+
+<p>I created a custom web interface for the SME to add, edit and delete phrases.</p>
+
+<p>Finally, I ensured that the application could be used off-line so that those without Internet access, such as pilots in the cockpit, could refer to it.</p>
+
+<h3>Technical</h3>
+
+<p>This really was a learning project for me and I have to admit I made several mistakes. I knew <em>how</em> to do what I wanted but, when I started testing the application, I realised I didn&#39;t know how to do it <strong>well</strong>.</p>
+
+<p>I used MS SQL Server and ASP.NET for the server side. In the front end I used jQuery Mobile as the interface should be touch-friendly in a responsive design.</p>
+
+<ul>
+<li>Mistake 1: using JavaScript to make a responsive design work.
+
+<ul>
+<li>Due to a lack of CSS knowledge at the time, I couldn&#39;t get jQuery Mobile to do what I wanted with CSS in the navigation and instead overrode it with JavaScript. This quickly got messy and hard to maintain.</li>
+<li>If there is a next version, it will use only CSS.</li>
+</ul></li>
+<li>Mistake 2: Overestimating the JavaScript engine in IE8.
+
+<ul>
+<li>I initially used a JavaScript library called <a href="http://www.taffydb.com/" title="An open source JavaScript Database library.">TaffyDB</a> and jQuery for any looping though items.</li>
+<li>IE8 continually hung and showed &#39;script running too slow&#39; warnings. It was basically exceeding the maximum number of calculations allowed.</li>
+<li>Besides having a great name, TaffyDB is a great tool but I&#39;m not sure I was getting the most out of it. Also, I soon discovered the impact of being lazy and relying on jQuery too much. I was making calls to elements that was creating loops within loops (possibly within loops!!).</li>
+<li>Eventually I gave up trying to optimise my approach and completely rewrote the code using dictionaries so I could drop TaffyDB and vanilla JavaScript instead of jQuery wherever possible.</li>
+<li>You can still hear IE8 creaking but it works :-)</li>
+</ul></li>
+<li>Mistake 3: I didn&#39;t take into account the impact of design in a page with a lot of content (long lists).
+
+<ul>
+<li>Older browsers and mobile devices would really struggle if any scrolling was involved.</li>
+<li>After researching the issue I understood better the impact page repaints can have on browser performance.</li>
+<li>I removed all the jQuery mobile drop shadows from each button in the huge lists and the problems were almost instantly fixed!</li>
+</ul></li>
+</ul>
+
+<p>I found the problem of creating an offline application very interesting.</p>
+
+<p>All content needs to be saved onto the client side. This means that it is not a practical approach for anything with a large amount of data. I would say that this application is probably on the limit.</p>
+
+<p>You need an inter-page communication strategy. I initially considered using URL query strings but I could quickly exceed the maximum length limit with many selected options. Also, returning to the previous page could lose the selection made by the user, forcing them to re-enter quite complicated filtering.</p>
+
+<p>In the end, I recorded selections to Local Storage on the browser and ran a check on that each time the page loaded. This works well.</p>
+
+<p>I used the HTML5 AppCache feature to save assets offline but I needed a way to trigger updates on the client side to update the content when the database was updated.</p>
+
+<p>The solution (scraped from various sources but, I&#39;m afraid, I can&#39;t find where just now) was to create a dynamic ASP.NET manifest. When the page loaded in the browser, some JavaScript would check for a new version of the manifest <a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/#toc-updating-cache">http://www.html5rocks.com/en/tutorials/appcache/beginner/#toc-updating-cache</a>. The dynamic page (&quot;Manifest.aspx&quot;) would check for the last update to the database using the following SQL:</p>
+
+<p><code>&quot;SELECT TOP 1 Stats.last_user_update As lastUpdate FROM sys.dm_db_index_usage_stats Stats, sys.tables Tables WHERE Stats.database_id = DB_ID( &#39;&quot;+connection.Database.ToString() +&quot;&#39;) ORDER BY Stats.last_user_update DESC&quot;</code></p>
+
+<p>This would write a date into a comment in the manifest. If the date was different from the last time the browser checked, the new pages (with the new JSON data models) would be downloaded to the browser.</p>
+
+<h3>Outcome</h3>
+
+<p>After a longer than normal testing period the application was released. Feedback has been positive and the client is very happy with it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Flight Plan Guide + Errors]]></title>
+    <link href="/blog/case-study/2014/01/11/case-fple.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/2014/01/11/case-fple</id>
+    <content type="html"><![CDATA[<p><a href="/blog/case-study/2014/01/10/case-fpl.html" title="Select to read a short case study of the Flight Plan Guide V1.0 web application.">Version 1.0</a> of the tool was so popular Eurocontrol decided to expand the app&#39;s remit. They wanted to add a section allowing users to explore errors they could expect to receive if the Flight Plan had been incorrectly filed.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-fple.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0." style="max-width:550px;">
+  <figcaption>Screenshot of the Flight Plan Guide Database Application v2.0.</figcaption>
+</figure>
+
+<p>You can view the current version at: <a href="http://contentzone.eurocontrol.int/fpl/" title="Open the Flight Plan Guide application in a new Window." target="_blank">http://contentzone.eurocontrol.int/fpl/</a></p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-fpleSmall.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0 at a small screen resolution." style="max-width:395px;">
+  <figcaption>Screenshot of the same Application on a small screen.</figcaption>
+</figure>
+
+<h3>Spec</h3>
+
+<p>Eurocontrol came to me with a general requirement to add an Errors section while retaining the version 1.0 features. I was asked to write the spec. I presented them with 2 detailed options, outlining the costs and benefits of each.</p>
+
+<ol>
+<li>Adapt the current desktop and mobile applications to the new requirement.</li>
+<li>Redsign from scratch, creating a responsive site and doing away with the need for dual applications - I had learned a wee bit more about responsive sites by now!</li>
+</ol>
+
+<p>All good websites should continue to evolve and my client, in their wisdom :-), chose to make the application responsive.</p>
+
+<h3>Solution</h3>
+
+<p>The new application is based on the &#39;Flat&#39; design concept. I like this because it improves performance in the browser and can make for a very clean interface as long as everything is given appropriate space and balance.</p>
+
+<p>I created a responsive design that would work on phone screens as well as desktops.</p>
+
+<p>I refactored the JavaScript to make it even more efficient and tried to use native JavaScript instead of jQuery wherever possible.</p>
+
+<p>On the details page I also added a &#39;step through&#39; feature to allow users to step through the list of items they had filtered down to.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-fpleSmall-detail.jpg" alt="Screenshot of the Flight Plan Item detail page at a small screen resolution." style="max-width:395px;">
+  <figcaption>Screenshot of the Flight Plan Detail page with step through feature on a small screen.</figcaption>
+</figure>
+
+<h3>Technical</h3>
+
+<p>I used jQuery Mobile for the interface as this is touch optimised and a better choice for a responsive design.</p>
+
+<p>Offline is still achieved via HTML5 appcache: the manifest.appcache file is dynamic, written in ASP.NET. It queries the database for the last change time and date. This time and date is written into the appcache file as a comment. Therefore, if the appcache file changes in any way, this triggers a reload of the content to the local browser (using a JavaScript checking function in the browser).</p>
+
+<p>This has the added benefit of improveing performance as new assets are only downloaded if there is a change on the server.</p>
+
+<p>This approach can only be used for relatively small datasets as all the content has to be loaded onto the client side.</p>
+]]></content>
+  </entry>
+  
+</feed>

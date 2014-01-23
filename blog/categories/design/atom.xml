@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | ]]></title>
+  <link href="/blog/categories/design/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-23T21:46:02+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Designing my logo]]></title>
+    <link href="/blog/design/2013/06/05/patrick-grey-logo-design.html"/>
+    <updated>2013-06-05T00:00:00+01:00</updated>
+    <id>/blog/design/2013/06/05/patrick-grey-logo-design</id>
+    <content type="html"><![CDATA[<p>I found a good article on webdesigner depot and tried to use those rules to produce my logo:
+<a href="http://www.webdesignerdepot.com/2013/03/4-essential-rules-of-effective-logo-design/" target="_blank">webdesignerdepot.com: 4 essential rules of effective logo design</a></p>
+]]></content>
+  </entry>
+  
+</feed>
