@@ -4,7 +4,7 @@
   <title><![CDATA[Category: task | ]]></title>
   <link href="/blog/categories/task/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-23T22:56:27+00:00</updated>
+  <updated>2014-01-24T08:04:34+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -41,12 +41,18 @@
 <li>On completion I commit to git to mark the end of the task.</li>
 </ul>
 
-<p>Extras:
-* If I find a technique or tool that is specifically useful, I will document that in its own additional post.
-* If some other part of the site is blocking this task or I REALLY need to move onto another thing, this documentation allows me to come back to the task with reasonable accuracy.</p>
+<p>Extras:</p>
 
-<p>Benefits:
-* I can note down where I get Open Source assets so I can correctly attribute them.</p>
+<ul>
+<li>If I find a technique or tool that is specifically useful, I will document that in its own additional post.</li>
+<li>If some other part of the site is blocking this task or I REALLY need to move onto another thing, this documentation allows me to come back to the task with reasonable accuracy.</li>
+</ul>
+
+<p>Benefits:</p>
+
+<ul>
+<li>I can note down where I get Open Source assets so I can correctly attribute them.</li>
+</ul>
 
 <p>As long as I keep the tasks in chunks that are small enough to complete but large enough to document, I think it will be worthwhile.</p>
 

@@ -196,14 +196,14 @@
 <li class="blog-post-link">
     <h3><a href="/blog/task/2013/12/19/task-svg-logo.html">Create a SVG Logo with png fallback</a></h3>
     <small class="blog-post-link-date">19 December 2013</small>
-    <p>This is the excerpt!</p>
+    <p>Task: Add a responsive svg logo to my website that will show a png fallback in browsers that don't support svg. It should also act as an accessible link to the home page. Finally, I would also like to leave open the option to animate the svg with CSS once JavaScript is introduced to the site.</p>
 
 </li>
 
 <li class="blog-post-link">
     <h3><a href="/blog/task/2013/12/19/task-svg-icons.html">Create SVG icons using a spritesheet and with png fallback</a></h3>
     <small class="blog-post-link-date">19 December 2013</small>
-    <p>This is the excerpt!</p>
+    <p>Task: I want to use icons for the lab section and the social media links on my site. A sprite sheet should be used to reduce network calls.</p>
 
 </li>
 
@@ -453,7 +453,17 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           // ga('create', 'UA-41706969-1', 'patrickgrey.co.uk/');
-          ga('create', 'UA-41706969-2', 'patrickgrey.github.io/');
+          // ga('create', 'UA-41706969-2', 'patrickgrey.github.io/');
+
+          // console.log(location.hostname);
+
+          if(location.hostname.match('patrickgrey.github.io')){
+
+              ga('create', 'UA-41706969-2', 'patrickgrey.github.io/');
+          }
+          else {
+              ga('create', 'UA-41706969-1', 'patrickgrey.co.uk/');
+          }
 
           ga('send', 'pageview');
         </script>
