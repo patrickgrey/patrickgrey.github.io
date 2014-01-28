@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Workflow for testing websites in IE8</title>
+        <title>Case Study: Flight Plan Guide v1.0 + Mobile</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -125,19 +125,69 @@
 
                         <!-- Note, should blog links show categories? -->
 
-                                    <h2>Workflow for testing websites in IE8</h2>
+                                    <h2>Case Study: Flight Plan Guide v1.0 + Mobile</h2>
 
-            <p class="blog-post-link-date-para"><small class="blog-post-link-date">19 December 2013</small></p>
+            <p class="blog-post-link-date-para"><small class="blog-post-link-date">10 January 2014</small></p>
 
-            <p class="blog-post-read-time-para"><small>Reading time ~1 min | Categories:
+            <p class="blog-post-read-time-para"><small>Reading time ~4 min | Categories:
             
-                <a href="/blog/categories/workflow">workflow</a>&nbsp;
+                <a href="/blog/categories/case-study">case-study</a>&nbsp;
+            
+                <a href="/blog/categories/web-apps">web-apps</a>&nbsp;
             
             </small></p>
             <div class="post">
-            <p>I was using IETester which was fine for a while but would crash with the slightest problem on the page. At least this let me know something was wrong but not much help in debugging.</p>
+            <p><strong>Note: these applications have been superceeded by version 2.0. You can read about that <a href="/blog/case-study/2014/01/11/case-fple.html" title="Select to read a short case study of the FPLE web application.">here</a>.</strong></p>
 
-<p>In the end I decided to go for a Virtual Machine (VM). I went to <a href="http://www.modern.ie/" title="A testing website for Internet Explorer">http://www.modern.ie/</a> and tried the Hyper-V machine for windows 8.Then discovered that it won&#39;t install on my laptop for some reason. I next tried <a href="https://www.virtualbox.org" title="Oracle Virtual Machine">VirtualBox</a> and it was successful. I had to install VirtualBox first and then run the Image exe provided by modern.ie but now I have a full IE8 running on XP (XP just for extra shit and giggles).</p>
+<p>In 2012 the format of Flight Plans was to be updated. To prepare Flight Plan users across Europe for the change in 2011, Eurocontrol commissioned me to create a database application to allow users to explore the changes.</p>
+
+<h3>Spec</h3>
+
+<p>Offline access was required as it would be used in-flight by pilots. There was also a need for an administration site to allow the Subject Matter Expert to create, edit and delete database content. Finally, the application had to work on a minimum browser of IE8 on XP. The rest was left up to me.</p>
+
+<h3>Solution</h3>
+
+<p>I designed and developer the MS SQL database, desktop and mobile applications and the admin back-end.</p>
+
+<p>I separated desktop and mobile to allow the mobile version to concentrate on optimised delivery with offline capabilities.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-fpl.jpg" alt="Screenshot of the Flight Plan Guide Database Application v1.0." style="max-width:598px;">
+  <figcaption>Screenshot of the Flight Plan Guide Database Application v1.0.</figcaption>
+</figure>
+
+<p>Both versions use custom Javascript to filter user selections in the browser, instead of on the server, to save a round trip and make the application respond almost instantly.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-10-case-fplm.jpg" alt="Screenshot of the Flight Plan Guide Database Mobile Application v1.0." style="max-width:247px;">
+  <figcaption>Screenshot of the Flight Plan Guide Database Mobile Application v1.0.</figcaption>
+</figure>
+
+<p>The desktop version allows users to narrow their selection using two groups of checkbox buttons. They could also use a free search input box that would filter the currently visible items and highlight the text that matched the search.</p>
+
+<p>The mobile version used drop down boxes that contained check buttons to reduce screen space used and allow all filter tools and some search results to appear in the available screen space.</p>
+
+<h3>Technical</h3>
+
+<p>The applications use MS SQL and ASP.NET server-side. Their main job is to build JSON data models and deliver them to the client browser embedded in the page.</p>
+
+<p>Custom JavaScript takes care of all filtering and user interaction. This format means that all the requierd data and assets can work on the client once I saved them locally using HTML5 AppCache.</p>
+
+<p>I used jQuery UI for the desktop version and jQuery Mobile for the mobile application.</p>
+
+<p>The Admin site was built using ASP.NET MVC Dynamic Data which automatically created most of the forms needed to properly edit the data. I had to create a few custom pages to tweak the process but overall it was incredible how quickly an admin site could be set up.</p>
+
+<h3>Outcome</h3>
+
+<p>The Flight Plan Guide was initially aimed at a European audience but, after it was recommended by ICAO, it reached a Worldwide audience:</p>
+
+<ul>
+<li>+53,000 unique visitors,</li>
+<li>+350,000 page views,</li>
+<li>from 187 different countries.</li>
+</ul>
+
+<p>It was very well received at Eurocontrol and an article appeared about it in the internal Insights magazine.</p>
 
             </div>
 

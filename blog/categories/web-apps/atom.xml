@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: case-study | ]]></title>
-  <link href="/blog/categories/case-study/atom.xml" rel="self"/>
+  <title><![CDATA[Category: web-apps | ]]></title>
+  <link href="/blog/categories/web-apps/atom.xml" rel="self"/>
   <link href="/"/>
   <updated>2014-01-28T20:36:54+00:00</updated>
   <id>/</id>
@@ -12,129 +12,6 @@
   </author>
   <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Case Study: PatrickGrey.co.uk]]></title>
-    <link href="/blog/case-study/websites/2014/01/11/case-website-patrickgrey.html"/>
-    <updated>2014-01-11T00:00:00+00:00</updated>
-    <id>/blog/case-study/websites/2014/01/11/case-website-patrickgrey</id>
-    <content type="html"><![CDATA[<p>I built version 1.0 of this website (you are looking at v2.0) trying to follow the tidal wave of new best practices I had read about over the last couple of years. Once finished, I hated it!</p>
-
-<p>When building v2.0, I tried to rectify many of the mistakes I think I made and I&#39;m actually very happy with the result. I hope you are too!</p>
-
-<figure>
-  <img src="/blog/img/2014/jan/2014-01-11-case-website-patrick-grey.jpg" alt="Screenshot of the PatrickGrey.co.uk website." style="max-width:255px;">
-  <figcaption>Screenshot of the PatrickGrey.co.uk version 1.0.</figcaption>
-</figure>
-
-<p>In v1.0 I focused too much on trying to get everything to fit in a mobile view without the need to scroll. This was a fundamental flaw. I also loved the idea of using animated SVG (I still do, it just makes sense) but I had to spend a lot of time trying to get it to work cross-browser.</p>
-
-<p>Finally on v1.0, my approach wasn&#39;t structured enough. I was trying to take an overview and implement features to fit into that view. Instead, I should have taken a more task driven approach and focused on each feature at a time.</p>
-
-<p>For v2.0 I took it all back to basics and built it up with very simple aims. The current approach is to add small features to enhance the site as I get time.</p>
-
-<p>I will write some follow-up posts to this one going into more technical detail of how I achieved some aspects of the design.</p>
-
-<h3>Needs Analysis</h3>
-
-<p>My main aim for the site is to help me get work. If a visitor asks, &quot;What can this person do for me?&quot;, I want them to find the answer quickly.</p>
-
-<p>For design and build, I had the following goals:</p>
-
-<ul>
-<li>I wanted a clean and clear design and layout.</li>
-<li>The site should be responsive</li>
-<li>I focused on performance. The site should load very quickly.</li>
-<li>It should be quick to build and easy to maintain.</li>
-</ul>
-
-<h3>Design</h3>
-
-<p>I started by redesigning my logo. I wanted something to reflect my design approach; clean, balanced colour and a good use of white space. I used the colours in the logo to reflect each section of the site.</p>
-
-<p>I reused the raindrop, which sounds better than drip ;-), motif throughout the rest of the design.</p>
-
-<p>It is a &#39;Flat&#39; design. This appeals to me as it increases the importance of white space and helps cut out design aspects that may impact browser performance (such as large drop shadows).</p>
-
-<p>I tried to keep the text content as minimal as possible. This really focused my mind on what I wanted to say.</p>
-
-<h3>Technical</h3>
-
-<p>The site was scaffolded and tested using  <a href="http://www.Yeoman.io" title="Open the Yeoman.io website in a new window." target="_blank">Yeoman.io</a>, an excellent set of workflow tools.</p>
-
-<p>The pages are created with the <a href="http://jekyllrb.com/" title="Open the jekyllrb.com website in a new window." target="_blank">http://jekyllrb.com/</a> static site generator.</p>
-
-<p>I used the <a href="https://github.com/robwierzbowski/generator-jekyllrb" title="Open the jgenerator-jekyllrb website in a new window." target="_blank">generator-jekyllrb</a> Yeoman generator to get started.</p>
-
-<p>Styles were preprocessed using SASS. Icons and the logo are SVG with a PNG fallback for IE8.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Case Study: JockGordon.co.uk]]></title>
-    <link href="/blog/case-study/websites/2014/01/11/case-website-jock-gordon.html"/>
-    <updated>2014-01-11T00:00:00+00:00</updated>
-    <id>/blog/case-study/websites/2014/01/11/case-website-jock-gordon</id>
-    <content type="html"><![CDATA[<p>This was a small static site that Jock asked me to build to promote his architectural drawing business on the Island of Skye.</p>
-
-<figure>
-  <img src="/blog/img/2014/jan/2014-01-11-case-website-jock-gordon.jpg" alt="Screenshot of the JockGordon.co.uk website." style="max-width:700px;">
-  <figcaption>Screenshot of the JockGordon.co.uk website.</figcaption>
-</figure>
-
-<p>You can visit <a href="http://www.jockgordon.co.uk" title="Open the jockgordon.co.uk website in a new window." target="_blank">jockgordon.co.uk here</a>.</p>
-
-<p>Jock wanted a simple site that would require minimal maintenance so I put most of my effort into the visual design. The design aims to reflect the high quality of his designs and emphasize his use of modern materials in an ancient landscape.</p>
-
-<p>It was also important the site would have a high search ranking when people were looking for building design services on Skye. The site has had a top two placing, most commonly first, for a number of years.</p>
-
-<blockquote>
-<p>&#8220;Patrick couldn&#39;t have been more helpful. He explained everything in a way I could understand and provided lots of advice.
-I&#39;m delighted with the site and it has helped my business with a high search engine ranking.&#8221;</p>
-
-<p>Jock Gordon</p>
-</blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Case Study: BarnesTennisClub.co.uk]]></title>
-    <link href="/blog/case-study/websites/2014/01/11/case-website-barnes-tennis-club.html"/>
-    <updated>2014-01-11T00:00:00+00:00</updated>
-    <id>/blog/case-study/websites/2014/01/11/case-website-barnes-tennis-club</id>
-    <content type="html"><![CDATA[<p>This was a Wordpress site project for a community tennis club in London.</p>
-
-<figure>
-  <img src="/blog/img/2014/jan/2014-01-11-case-website-barnes-tennis.jpg" alt="Screenshot of the BarnesTennisClub.co.uk website." style="max-width:476px;">
-  <figcaption>Screenshot of the JockGordon.co.uk website viewed on a mobile device.</figcaption>
-</figure>
-
-<p>You can visit <a href="http://www.barnestennisclub.co.uk" title="Open the BarnesTennisClub.co.uk website in a new window." target="_blank">BarnesTennisClub.co.uk here</a>.</p>
-
-<p>The client wasn&#39;t sure what could be done with a website so I guided them through target audience considerations, the benefits of responsive design and maintenance using a Content Management System. I worked closely with them on the design, social media usage and provided training for the site administrator.</p>
-
-<p>The club has been successfully updating the site themselves since 2012, even creating micro sites aimed at one off events.</p>
-
-<p>The client was so happy with the work, I received a cracking bottle of Oban Malt :-)</p>
-
-<blockquote>
-<p>&#8220;We are thrilled with the new look and style...
-Thank you for all your time spent on this and I&#39;m sure our Club will prosper as a direct result due to all the new members we will attract.</p>
-
-<p>Best wishes,</p>
-
-<p>Jane Bonner,</p>
-
-<p>Chairman.&#8221;</p>
-</blockquote>
-
-<h3>Technical</h3>
-
-<p>I used <a href="http://www.wordpress.org" title="Open the wordpress.org website in a new window." target="_blank">wordpress.org</a> as the Content Management System and the <a href="http://cyberchimps.com/responsive-theme/" title="Open the Cyber Chimps website in a new window." target="_blank">Responsive Theme</a> from Cyber Chimps which I modified with custom CSS and JavaScript.</p>
-
-<p>The theme will work on mobile devices, tablets and desktops.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Case Study: Say Again?]]></title>
@@ -284,6 +161,130 @@ Thank you for all your time spent on this and I&#39;m sure our Club will prosper
 <p>This has the added benefit of improveing performance as new assets are only downloaded if there is a change on the server.</p>
 
 <p>This approach can only be used for relatively small datasets as all the content has to be loaded onto the client side.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Aircraft Performance v3.0]]></title>
+    <link href="/blog/case-study/web-apps/2014/01/11/case-ap.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/web-apps/2014/01/11/case-ap</id>
+    <content type="html"><![CDATA[<p>This has proved to be one of the most popular applications created for Eurocontrol since I designed and built the first version in 2006.</p>
+
+<p>It is important that Air Traffic Controllers understand the performance capabilities of aircraft they are monitoring. This application provides them with a reference tool to help them learn about those capabilities.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-ap.jpg" alt="Screenshot of the Flight Plan Guide Database Application v3.0." style="max-width:700px;">
+  <figcaption>Screenshot of the Say Again? Database Application v2.0. Note the personalised custom groups, advert and social media elements.</figcaption>
+</figure>
+
+<p>Version 1.0 provided search functions, detail displays, and an admin back-end. Version 2.0 was a rebuild replacing ASP with ASP.NET and MySQL with MS SQL.</p>
+
+<p>Version 3.0 re-factored the application to make it tablet friendly (Flash graphs were replaced with images and an adaptive approach was adopted). Social sharing, course advertising and personalisation was also added (if the learner was logged on to the Learning Management System, they would be allowed to save custom lists of aircraft). Finally, a mobile version was also created.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-ap-detail.jpg" alt="Screenshot of the Detail screen." style="max-width:500px;">
+  <figcaption>Detail screen of the Application.</figcaption>
+</figure>
+
+<p>You can view the current version at: <a href="http://contentzone.eurocontrol.int/aircraftperformance/" title="Open the Aircraft Performance application in a new Window." target="_blank">http://contentzone.eurocontrol.int/aircraftperformance/</a></p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-apm.jpg" alt="Screenshot of the Mobile Aircraft Performance Database v3.0." style="max-width:329px;">
+  <figcaption>Screenshot of the mobile version of the Application.</figcaption>
+</figure>
+
+<p>You can view the current mobile version at: <a href="http://contentzone.eurocontrol.int/apm/" title="Open the Mobile Aircraft Performance application in a new Window." target="_blank">http://contentzone.eurocontrol.int/apm/</a></p>
+
+<h3>Spec</h3>
+
+<p>I was provided with a detailed, non-technical spec and asked to draw up the technical plans to work from.</p>
+
+<p>It had to incorporate all the features mentioned above, be available to mobile devices and work in IE8 on XP as a minimum.</p>
+
+<h3>Solution</h3>
+
+<p>Some parts of the solution I am very happy with although now (some years after completion), I would possibly take a different approach.</p>
+
+<p>The custom groups has proved popular and is an excellent way to encourage users to sign up for the Learning Management System (credit must go to the Project Manager for that idea!)</p>
+
+<p>A wide range of devices have been tracked using the application but I would still prefer one code base for maintenance. Therefore, if I was awarded the work to create the next version, I would take a detailed look into whether a responsive approach would be feasible (sometime it just isn&#39;t!)</p>
+
+<h3>Technical</h3>
+
+<p>The desktop application was built using MS SQL and ASP.NET for the back end (and admin) with custom JavaScript and CSS, jQuery UI for the front end.</p>
+
+<p>The mobile application used the same back end and an early version of jQuery Mobile for the front.</p>
+
+<p>I built a small JavaScript library to communicate with the LMS API in order to log in.
+LMS API and create a bridge for the Custom Groups feature.</p>
+
+<p>I used AJAX calls to add, edit and delete custom data to the database. I built all this functionality using JavaScript.</p>
+
+<h3>Outcome</h3>
+
+<p>The Aircraft Performance Databases has consistently been one of the most visited applications at the Eurocontrol IANS training institute over the years, which I think shows its training value.</p>
+
+<p>The project manager was so happy with the work, he has given me an open reference to use in all future tenders.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Flight Plan Guide v1.0 + Mobile]]></title>
+    <link href="/blog/case-study/web-apps/2014/01/10/case-fpl.html"/>
+    <updated>2014-01-10T00:00:00+00:00</updated>
+    <id>/blog/case-study/web-apps/2014/01/10/case-fpl</id>
+    <content type="html"><![CDATA[<p><strong>Note: these applications have been superceeded by version 2.0. You can read about that <a href="/blog/case-study/2014/01/11/case-fple.html" title="Select to read a short case study of the FPLE web application.">here</a>.</strong></p>
+
+<p>In 2012 the format of Flight Plans was to be updated. To prepare Flight Plan users across Europe for the change in 2011, Eurocontrol commissioned me to create a database application to allow users to explore the changes.</p>
+
+<h3>Spec</h3>
+
+<p>Offline access was required as it would be used in-flight by pilots. There was also a need for an administration site to allow the Subject Matter Expert to create, edit and delete database content. Finally, the application had to work on a minimum browser of IE8 on XP. The rest was left up to me.</p>
+
+<h3>Solution</h3>
+
+<p>I designed and developer the MS SQL database, desktop and mobile applications and the admin back-end.</p>
+
+<p>I separated desktop and mobile to allow the mobile version to concentrate on optimised delivery with offline capabilities.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-fpl.jpg" alt="Screenshot of the Flight Plan Guide Database Application v1.0." style="max-width:598px;">
+  <figcaption>Screenshot of the Flight Plan Guide Database Application v1.0.</figcaption>
+</figure>
+
+<p>Both versions use custom Javascript to filter user selections in the browser, instead of on the server, to save a round trip and make the application respond almost instantly.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-10-case-fplm.jpg" alt="Screenshot of the Flight Plan Guide Database Mobile Application v1.0." style="max-width:247px;">
+  <figcaption>Screenshot of the Flight Plan Guide Database Mobile Application v1.0.</figcaption>
+</figure>
+
+<p>The desktop version allows users to narrow their selection using two groups of checkbox buttons. They could also use a free search input box that would filter the currently visible items and highlight the text that matched the search.</p>
+
+<p>The mobile version used drop down boxes that contained check buttons to reduce screen space used and allow all filter tools and some search results to appear in the available screen space.</p>
+
+<h3>Technical</h3>
+
+<p>The applications use MS SQL and ASP.NET server-side. Their main job is to build JSON data models and deliver them to the client browser embedded in the page.</p>
+
+<p>Custom JavaScript takes care of all filtering and user interaction. This format means that all the requierd data and assets can work on the client once I saved them locally using HTML5 AppCache.</p>
+
+<p>I used jQuery UI for the desktop version and jQuery Mobile for the mobile application.</p>
+
+<p>The Admin site was built using ASP.NET MVC Dynamic Data which automatically created most of the forms needed to properly edit the data. I had to create a few custom pages to tweak the process but overall it was incredible how quickly an admin site could be set up.</p>
+
+<h3>Outcome</h3>
+
+<p>The Flight Plan Guide was initially aimed at a European audience but, after it was recommended by ICAO, it reached a Worldwide audience:</p>
+
+<ul>
+<li>+53,000 unique visitors,</li>
+<li>+350,000 page views,</li>
+<li>from 187 different countries.</li>
+</ul>
+
+<p>It was very well received at Eurocontrol and an article appeared about it in the internal Insights magazine.</p>
 ]]></content>
   </entry>
   

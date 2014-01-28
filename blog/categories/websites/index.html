@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Case Study: Say Again?</title>
+        <title>Category: websites</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -125,105 +125,40 @@
 
                         <!-- Note, should blog links show categories? -->
 
-                                    <h2>Case Study: Say Again?</h2>
+                                            <h2>Category: websites</h2>
+                    <ul class="blog-post-links">
+                    
 
-            <p class="blog-post-link-date-para"><small class="blog-post-link-date">11 January 2014</small></p>
 
-            <p class="blog-post-read-time-para"><small>Reading time ~9 min | Categories:
-            
-                <a href="/blog/categories/case-study">case-study</a>&nbsp;
-            
-            </small></p>
-            <div class="post">
-            <p>Air Traffic Control and Pilots use pre-defined phrases when communicating to ensure clarity. Eurocontrol had a database application that could act as a reference for these phrases but they wanted to modernise the technologies used and improve the administration process.</p>
+                        <li class="blog-post-link">
+                            <h3><a href="/blog/case-study/websites/2014/01/11/case-website-patrickgrey.html">Case Study: PatrickGrey.co.uk</a></h3>
+                            <small class="blog-post-link-date">11 January 2014</small>
+                            <p>I built version 1.0 of this website (you are looking at v2.0) trying to follow the tidal wave of new best practices I had read about over the last couple of years. Once finished, I hated it!
 
-<figure>
-  <img src="/blog/img/2014/jan/2014-01-11-case-phr.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0." style="max-width:653px;">
-  <figcaption>Screenshot of the Say Again? Database Application v2.0.</figcaption>
-</figure>
+</p>
+                        </li>
+                    
 
-<p>You can view the current version at: <a href="http://contentzone.eurocontrol.int/Phraseology/" title="Open the Say Again? application in a new Window." target="_blank">http://contentzone.eurocontrol.int/Phraseology/</a></p>
 
-<figure>
-  <img src="/blog/img/2014/jan/2014-01-11-case-phrm.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0 at a small screen resolution." style="max-width:436px;">
-  <figcaption>Screenshot of the same Application on a small screen.</figcaption>
-</figure>
+                        <li class="blog-post-link">
+                            <h3><a href="/blog/case-study/websites/2014/01/11/case-website-jock-gordon.html">Case Study: JockGordon.co.uk</a></h3>
+                            <small class="blog-post-link-date">11 January 2014</small>
+                            <p>This was a small static site that Jock asked me to build to promote his architectural drawing business on the Island of Skye.
 
-<h3>Spec</h3>
+</p>
+                        </li>
+                    
 
-<p>Eurocontrol asked me to redesign the application to improve the User Experience and administrative process.</p>
 
-<p>Making updates to the database involved the Subject Matter Expert (SME) making changes to an Excel spreadsheet and uploading it via a web page. The database was then destroyed and rebuilt using that data. As well as being a clumsy interface to use, it left user input unchecked and prone to errors.</p>
+                        <li class="blog-post-link">
+                            <h3><a href="/blog/case-study/websites/2014/01/11/case-website-barnes-tennis-club.html">Case Study: BarnesTennisClub.co.uk</a></h3>
+                            <small class="blog-post-link-date">11 January 2014</small>
+                            <p>This was a Wordpress site project for a community tennis club in London.
 
-<p>I was asked to create the technical spec for review but the final product should work in IE8 on XP as a minimum.</p>
-
-<h3>Solution</h3>
-
-<p>Each Phrase could belong to two groupings called &quot;Categories&quot; and &quot;Contexts&quot;. There are fairly complicated relationships between the groups and Phrases. The existing application did these calculations on the server side by querying the database. This was logical as the relationships are already established there.</p>
-
-<p>However, this resulted in a round trip to the server each time a user wanted to refine a grouping filter. Users would typically make several selections and the trips to the server could really slow things down.</p>
-
-<p>I decided to move the filtering calculation to the client-side, using custom JavaScript and JSON models to recreate the relationships. This meant that filtering would occur instantly so that users could quickly find the Phrase(s) they would looking for.</p>
-
-<p>The application was built using a responsive approach (meaning it will work as well on mobile devices as desktop computers) so that there would be only one code base to maintain.</p>
-
-<p>I created a custom web interface for the SME to add, edit and delete phrases.</p>
-
-<p>Finally, I ensured that the application could be used off-line so that those without Internet access, such as pilots in the cockpit, could refer to it.</p>
-
-<h3>Technical</h3>
-
-<p>This really was a learning project for me and I have to admit I made several mistakes. I knew <em>how</em> to do what I wanted but, when I started testing the application, I realised I didn&#39;t know how to do it <strong>well</strong>.</p>
-
-<p>I used MS SQL Server and ASP.NET for the server side. In the front end I used jQuery Mobile as the interface should be touch-friendly in a responsive design.</p>
-
-<ul>
-<li>Mistake 1: using JavaScript to make a responsive design work.
-
-<ul>
-<li>Due to a lack of CSS knowledge at the time, I couldn&#39;t get jQuery Mobile to do what I wanted with CSS in the navigation and instead overrode it with JavaScript. This quickly got messy and hard to maintain.</li>
-<li>If there is a next version, it will use only CSS.</li>
-</ul></li>
-<li>Mistake 2: Overestimating the JavaScript engine in IE8.
-
-<ul>
-<li>I initially used a JavaScript library called <a href="http://www.taffydb.com/" title="An open source JavaScript Database library.">TaffyDB</a> and jQuery for any looping though items.</li>
-<li>IE8 continually hung and showed &#39;script running too slow&#39; warnings. It was basically exceeding the maximum number of calculations allowed.</li>
-<li>Besides having a great name, TaffyDB is a great tool but I&#39;m not sure I was getting the most out of it. Also, I soon discovered the impact of being lazy and relying on jQuery too much. I was making calls to elements that was creating loops within loops (possibly within loops!!).</li>
-<li>Eventually I gave up trying to optimise my approach and completely rewrote the code using dictionaries so I could drop TaffyDB and vanilla JavaScript instead of jQuery wherever possible.</li>
-<li>You can still hear IE8 creaking but it works :-)</li>
-</ul></li>
-<li>Mistake 3: I didn&#39;t take into account the impact of design in a page with a lot of content (long lists).
-
-<ul>
-<li>Older browsers and mobile devices would really struggle if any scrolling was involved.</li>
-<li>After researching the issue I understood better the impact page repaints can have on browser performance.</li>
-<li>I removed all the jQuery mobile drop shadows from each button in the huge lists and the problems were almost instantly fixed!</li>
-</ul></li>
-</ul>
-
-<p>I found the problem of creating an offline application very interesting.</p>
-
-<p>All content needs to be saved onto the client side. This means that it is not a practical approach for anything with a large amount of data. I would say that this application is probably on the limit.</p>
-
-<p>You need an inter-page communication strategy. I initially considered using URL query strings but I could quickly exceed the maximum length limit with many selected options. Also, returning to the previous page could lose the selection made by the user, forcing them to re-enter quite complicated filtering.</p>
-
-<p>In the end, I recorded selections to Local Storage on the browser and ran a check on that each time the page loaded. This works well.</p>
-
-<p>I used the HTML5 AppCache feature to save assets offline but I needed a way to trigger updates on the client side to update the content when the database was updated.</p>
-
-<p>The solution (scraped from various sources but, I&#39;m afraid, I can&#39;t find where just now) was to create a dynamic ASP.NET manifest. When the page loaded in the browser, some JavaScript would check for a new version of the manifest <a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/#toc-updating-cache">http://www.html5rocks.com/en/tutorials/appcache/beginner/#toc-updating-cache</a>. The dynamic page (&quot;Manifest.aspx&quot;) would check for the last update to the database using the following SQL:</p>
-
-<p><code>&quot;SELECT TOP 1 Stats.last_user_update As lastUpdate FROM sys.dm_db_index_usage_stats Stats, sys.tables Tables WHERE Stats.database_id = DB_ID( &#39;&quot;+connection.Database.ToString() +&quot;&#39;) ORDER BY Stats.last_user_update DESC&quot;</code></p>
-
-<p>This would write a date into a comment in the manifest. If the date was different from the last time the browser checked, the new pages (with the new JSON data models) would be downloaded to the browser.</p>
-
-<h3>Outcome</h3>
-
-<p>After a longer than normal testing period the application was released. Feedback has been positive and the client is very happy with it.</p>
-
-            </div>
-
+</p>
+                        </li>
+                    
+                    </ul>
 
 
 
@@ -264,7 +199,7 @@
 
                             
 
-                                <a href="/blog/categories/work/"  title="Category: work">work</a>,&nbsp;
+                                <a href="/blog/categories/business-time/"  title="Category: business-time">business-time</a>,&nbsp;
 
                             
                             <!-- Need to chec if last and not add comma - or check if first and add comma after -->
@@ -296,7 +231,31 @@
 
                             
 
-                                <a href="/blog/categories/case-study/"  title="Category: case-study">case-study</a>
+                                <a href="/blog/categories/case-study/"  title="Category: case-study">case-study</a>,&nbsp;
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+
+                            
+
+                                <a href="/blog/categories/web-apps/"  title="Category: web-apps">web-apps</a>,&nbsp;
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+
+                            
+
+                                <a href="/blog/categories/e-learning/"  title="Category: e-learning">e-learning</a>,&nbsp;
+
+                            
+                            <!-- Need to chec if last and not add comma - or check if first and add comma after -->
+                        
+
+                            
+
+                                <a href="/blog/categories/websites/"  title="Category: websites">websites</a>
 
                             
                             <!-- Need to chec if last and not add comma - or check if first and add comma after -->
@@ -408,8 +367,7 @@
 
           // console.log(location.hostname);
 
-          if(location.hostname.match('patrickgrey.github.io')){
-
+          if( location.hostname.match( 'patrickgrey.github.io' ) ) {
               ga('create', 'UA-41706969-2', 'patrickgrey.github.io/');
           }
           else {
@@ -421,19 +379,24 @@
 
         <script >
             /*
-
-            Yeoman
-            jekyll
-            jekyll generator
-            normalize
-            free circle icons
-
-            * LICENCES: this section is inlcuded to reference the licences of the people who have kindly made their code available for use.
-            * My workflow uses Yeoman.io to automatically minify my JavaScript, which removes comments including licence details. I am therefore inluding it here.
+            * These are the tools I am incredibly grateful for that allowed me to build this site!
             *
-            * https://github.com/neilorangepeel/Free-Social-Icons - get licence!
+            *
+            * Yeoman: http://yeoman.io/
+            * jekyll: http://jekyllrb.com/
+            * jekyll generator: https://github.com/robwierzbowski/generator-jekyllrb
+            * normalize: https://github.com/necolas/normalize.css/
+            * free circle icons: https://github.com/neilorangepeel/Free-Social-Icons
+            *
+            *
+            * LICENCES: this section is inlcuded to reference the licences of the people who have kindly made their code available for use.
+            * My workflow uses Yeoman.io to automatically minify my JavaScript, which removes comments including licence details. I am therefore inluding all the relevant licences I could find here.
             *
             * normalize.css v2.0.1 | MIT License | git.io/normalize
+            *
+            * Yeoman: http://en.wikipedia.org/wiki/BSD_License
+            *
+            * jekyll generator: http://en.wikipedia.org/wiki/BSD_License
             */
         </script>
     </body>

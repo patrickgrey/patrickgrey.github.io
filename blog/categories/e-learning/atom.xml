@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: e-learning | ]]></title>
+  <link href="/blog/categories/e-learning/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-28T20:36:54+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Introduction to Air Traffic Flow and Capacity Management (ATFCM)]]></title>
+    <link href="/blog/case-study/e-learning/2014/01/11/case-elearning-nmo-atfcm-intro-e.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/e-learning/2014/01/11/case-elearning-nmo-atfcm-intro-e</id>
+    <content type="html"><![CDATA[<p>The objective of ATFCM is to optimise traffic flows according to air traffic control capacity while enabling airlines to operate safe and efficient flights. I was asked to review  an existing ATFCM course and translate the content into a tablet friendly format.</p>
+
+<p>This was the first course Eurocontrol commissioned that was developed entirely with Adobe Edge Animate, making the content accessible to devices that don&#39;t support Flash.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-elearning-nmo-atfcm-intro-e.jpg" alt="Screenshot of some ATFCM Intro module content." style="max-width:553px;">
+  <figcaption>Screenshot of some ATFCM Intro module content.</figcaption>
+</figure>
+
+<p>You can try this course by registering with the <a href="https://trainingzone.eurocontrol.int/" title="Open the Eurocontrol LMS website in a new window." target="_blank">Eurocontrol LMS</a> and looking in the catalogue for &quot;ATFCM&quot;.</p>
+
+<p>This was a great learning experience for me, I really got to grips with Edge, discovered its many quirks and built up many assets that will be reusable in future.</p>
+
+<p>For Eurocontrol it was a great opportunity to see how new forms of content would integrate with their LCMS. It is also an opportunity to measure interest from devices that previously wouldn&#39;t be able to access the content.</p>
+
+<p>It was exciting to be present at the start of a new development era for such a large organisation.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Headings Tutor]]></title>
+    <link href="/blog/case-study/e-learning/2014/01/11/case-elearning-ht.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/e-learning/2014/01/11/case-elearning-ht</id>
+    <content type="html"><![CDATA[<p>This is an HTML5 game that helps users learn about vectoring aircraft in a fun way.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-elearning-ht.jpg" alt="Screenshot of the Headings Tutor game." style="max-width:280px;">
+  <figcaption>Screenshot of the Headings Tutor game.</figcaption>
+</figure>
+
+<p>You can try this game on the <a href="https://trainingzone.eurocontrol.int/clix/data/scorm/decompressed/atco_games_234707/SCOs/index_direct.htm" title="Open the Eurocontrol LMS website in a new window." target="_blank">Eurocontrol LMS</a>. catalogue for &quot;Headings Tutor&quot;.</p>
+
+<p>The game is built on the HTML5 canvas element using <a href="http://www.createjs.com/" title="Open the createjs.com website in a new window." target="_blank">http://www.createjs.com/</a>.</p>
+
+<p>It is responsive and saves high scores locally to the learners device.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: E-learning Strategy Consultation]]></title>
+    <link href="/blog/case-study/e-learning/2014/01/11/case-elearning-consult.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/e-learning/2014/01/11/case-elearning-consult</id>
+    <content type="html"><![CDATA[<p>I like to keep clients informed of the latest trends in e-learning and general web development. In 2013 Eurocontrol were still developing content in Flash and their systems were all based around desktop delivery. I suggested they needed to urgently start thinking about catering for non-desktop devices.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-elearning-consult.jpg" alt="Screenshot of the Headings Tutor game." style="max-width:414px;">
+  <figcaption>Mobile learning is increasingly important.</figcaption>
+</figure>
+
+<p>As a result, they asked me to put together a strategy paper stating the reasons a change should be made and how that change could be brought about.</p>
+
+<p>My recommendations were adopted and the organisation is now moving towards a &#39;future-friendly&#39; approach to e-learning development.</p>
+
+<p>Furthermore, I was asked to produce reports evaluating the current LCMS for its mobile capabilities and Adobe Edge as a development tool to replace Flash. Adobe Edge is now being used for all major animated and interactive content development.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Airport Collaborative Decision Making (A-CDM)]]></title>
+    <link href="/blog/case-study/e-learning/2014/01/11/case-elearning-acdm.html"/>
+    <updated>2014-01-11T00:00:00+00:00</updated>
+    <id>/blog/case-study/e-learning/2014/01/11/case-elearning-acdm</id>
+    <content type="html"><![CDATA[<p>This is the largest course I have completed single-handedly. It contains over 10 hours of learning. I was tasked with educational design, technical design and development (including editing several hours of video footage) and deployment.</p>
+
+<p>A-CDM is is a common sense idea that is being introduced to airports internationally.</p>
+
+<p>There is a lot of data about flight contained across many different systems at airports. Up until recently, that data was not being shared as much as it could be. A-CDM introduces guidance and processes to allow different airport professions share more of their data. This results in a much more efficient transit from landing to departure and can reduce delays.</p>
+
+<figure>
+  <img src="/blog/img/2014/jan/2014-01-11-case-elearning-acdm.jpg" alt="Screenshot of the Headings Tutor game." style="max-width:481px;">
+  <figcaption>Screenshot of one of the A-CDM modules.</figcaption>
+</figure>
+
+<p>You can try this course by registering with the <a href="https://trainingzone.eurocontrol.int/" title="Open the Eurocontrol LMS website in a new window.">Eurocontrol LMS</a> and looking in the catalogue for &quot;CDM&quot;.</p>
+
+<p>This was an interesting challenge to take on. I was subcontracted by the Subject Matter Experts, <a href="http://www.integra.dk/" title="Open the Eurocontrol LMS website in a new window.">Integra</a>, who had won the contract to develop an e-learning course for A-CDM. They had already hired a company to produce the e-learning but, after several months, they were unable to deliver the content. Integra and Eurocontrol were left with very little digital content and completely unsuitable storyboards.</p>
+
+<p>My first action was to inform my clients that, in my opinion, their course could not be delivered in the timescale they were aiming at. I had reviewed the existing storyboard and judged that it would need to be completely rewritten before any content could be created.</p>
+
+<p>Happily the clients agreed with the new course of action and work got under way. As well as designing an entirely new storyboard with the SME, I designed and developed the course LMS navigation, all graphics and all animations. I also filmed over 5 hours of interviews, edited them and integrated them into a custom Flash video player I had built.</p>
+
+<p>After a year of six day weeks, some long nights and enough coffee to fill a loch, the course was launched on time and on budget.</p>
+]]></content>
+  </entry>
+  
+</feed>

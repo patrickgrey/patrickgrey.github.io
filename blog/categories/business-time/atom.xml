@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: work | ]]></title>
-  <link href="/blog/categories/work/atom.xml" rel="self"/>
+  <title><![CDATA[Category: business-time | ]]></title>
+  <link href="/blog/categories/business-time/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-24T08:04:34+00:00</updated>
+  <updated>2014-01-28T20:36:54+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using own name vs business name when self-employed]]></title>
-    <link href="/blog/work/2013/07/04/own-vs-business-name.html"/>
+    <link href="/blog/business-time/2013/07/04/own-vs-business-name.html"/>
     <updated>2013-07-04T00:00:00+01:00</updated>
-    <id>/blog/work/2013/07/04/own-vs-business-name</id>
+    <id>/blog/business-time/2013/07/04/own-vs-business-name</id>
     <content type="html"><![CDATA[<p>I’ve been self-employed for about 12 years now, going by the superhero pseudonym of “websemantic”. An AWESOME business name, I’m sure you’ll agree.</p>
 
 <p>I’ve wanted to change it for some time but, to be honest, my business name has had little impact on how I get work. So why change it?</p>
