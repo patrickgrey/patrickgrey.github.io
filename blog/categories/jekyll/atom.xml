@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: geekery | ]]></title>
-  <link href="/blog/categories/geekery/atom.xml" rel="self"/>
+  <title><![CDATA[Category: jekyll | ]]></title>
+  <link href="/blog/categories/jekyll/atom.xml" rel="self"/>
   <link href="/"/>
   <updated>2014-01-29T11:03:20+00:00</updated>
   <id>/</id>
@@ -43,77 +43,6 @@
 <p>I have a Jekyll generated site. I build and upload it to my hosting (patrickgrey.co.uk). I also keep a backup on GitHub. Since it&#39;s there I thought, why not make it a GitHub Pages site as well? So I did (patrickgrey.github.io).</p>
 
 <p>The problem was I wanted to use Google Analytics for each one to see who was poking their nose in ;-) The manual approach would have been to comment out one account UA id and uncomment the other, recompile the Jekyll site and upload/push. The code above means I can use the same code base for both sites. An edge case but it may come in handy.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Understanding Node, NPM and Bower]]></title>
-    <link href="/blog/geekery/2013/06/13/understanding-node-npm.html"/>
-    <updated>2013-06-13T00:00:00+01:00</updated>
-    <id>/blog/geekery/2013/06/13/understanding-node-npm</id>
-    <content type="html"><![CDATA[<p>I started to become aware of command line tools when I started using <a href="http://Yeoman.io" target="_blank">Yeoman.io</a>. These tools are useful and are becoming more popular in the front-end development area. I decided I needed to understand what the different tools were in order to use them properly.</p>
-
-<h3>Node.js</h3>
-
-<p>This has been at the root of the tools I have used. This article gave me a good insight into what it is and what it aims to do:
-<a href="https://github.com/maxogden/art-of-node" target="_blank">https://github.com/maxogden/art-of-node</a></p>
-
-<p><em>Takeaway:</em> Node is just a tool for managing I/O across file systems and networks. Think of as a server-side platform written in Javascript.</p>
-
-<p>Node can be used to write programs that;</p>
-
-<ul>
-<li>use the protocols of the web (I’m guessing at this point this could be related to SOA - fast and simple - but Ruby seems more popular for that just now)</li>
-<li>read and write data to the filesystem and local processes/memory</li>
-</ul>
-
-<p>It does this in an asynchronous way and uses an event model.</p>
-
-<h3>NPM</h3>
-
-<p>I found this really useful for my understanding of NPM and Bower:
-<a href="http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer">http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer</a></p>
-
-<p><em>Takeaway:</em> NPM allows me to install, update and uninstall tools that help my workflow. These tools run in the console.</p>
-
-<h3>Bower</h3>
-
-<p>Bower does the same, loading all sorts of components for the front end. The article didn’t give me much of an idea of the practical potential, I need to look about more for that. Note: I can see real benefits for this like loading icon sprites (social media) or html components but I have a concern about js and css files as it seems that I have to link to each one that is installed. For performance reasons, I prefer to minify and concatenate these files for performance. Maybe I’m wrong here but this was my initial impression.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Consoles in Web Development]]></title>
-    <link href="/blog/geekery/2013/06/05/using-consoles-in-web-development.html"/>
-    <updated>2013-06-05T00:00:00+01:00</updated>
-    <id>/blog/geekery/2013/06/05/using-consoles-in-web-development</id>
-    <content type="html"><![CDATA[<p>Using Command Prompt to develop stuff makes me feel like the proper programmers you would see in <a href="http://youtu.be/B8dldLG_ZhI?t=35s" target="_blank">80s movies</a>.</p>
-
-<p><img src="/blog/img/2013/warGames.jpg" alt="Screenshot of War Games movie asking computer to play Thermonuclear war." width="100%" /></p>
-
-<p>Typing weird runes into a basic interface and then long lists speeding down the screen show that something important and impressive is happening. It looks like you have the capability to start World War 3 using only your ZX Spectrum. In reality, all you are doing is playing with advanced lego. You are plugging together small, focussed tools that other geniuses have built to improve your workflow.</p>
-
-<p>I ignored the console for years. I didn&#39;t know how to use it. If they can&#39;t be bothered putting a GUI on it, why should I?</p>
-
-<p>It turns out the beauty of the console is its simplicity. It forces you to keep software concepts and processes in your head. This gives you a better understanding of how things work and lets you work with the tools better and faster.</p>
-
-<p>I use the console to manage GIT repositories and install, update and run web development frameworks like <a href="http://Yeoman.io" target="_blank">Yeoman.io</a> and <a href="http://DocPad.org" target="_blank">DocPad.org</a>.</p>
-
-<p>All my projects are now backed up online and have version control thanks to GIT and <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>. This means I can work on the same project on different machines, safe in the knowledge that I have a backup of all the versions I have made. All this for free - music to the ears of this Scotsman :-) This is just an example of the possible benefits.</p>
-
-<p>With a little bit of learning I have found massive benefits to my daily work, which is why I would recommend you take the time to learn about using the console and these frameworks.</p>
-
-<p>You will find that all the cool console stuff is aimed at Macs but I mainly develop on windows machines and have got everything working that I need to.</p>
-
-<p>Try this out to get started:</p>
-
-<ul>
-<li>First learn the basics: how to navigate your file system.</li>
-<li>Then install a platform like <a href="http://nodejs.org/" target="_blank">Node.js</a> that will allow you to run these tools on it.</li>
-<li>Then install one of the tools like Yeoman and try running the basic settings. You will soon grasp the benefits.</li>
-</ul>
-
-<p>The best way to learn is to try it.</p>
 ]]></content>
   </entry>
   

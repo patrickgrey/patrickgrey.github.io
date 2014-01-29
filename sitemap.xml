@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/blog/geekery/jekyll/2014/01/29/jekyll-google-analytics-different-domain.html</loc>
+    <lastmod>2014-01-29</lastmod>
+
+  </url>
+  <url>
     <loc>/blog/case-study/websites/2014/01/11/case-website-patrickgrey.html</loc>
     <lastmod>2014-01-11</lastmod>
 
@@ -107,22 +112,22 @@
   </url>
 <url>
   <loc>/index.html</loc>
-  <lastmod>2014-01-28</lastmod>
+  <lastmod>2014-01-29</lastmod>
 </url>
 <url>
   <loc>/elearning.html</loc>
-  <lastmod>2014-01-28</lastmod>
+  <lastmod>2014-01-29</lastmod>
 </url>
 <url>
   <loc>/webapps.html</loc>
-  <lastmod>2014-01-28</lastmod>
+  <lastmod>2014-01-29</lastmod>
 </url>
 <url>
   <loc>/websites.html</loc>
-  <lastmod>2014-01-28</lastmod>
+  <lastmod>2014-01-29</lastmod>
 </url>
 <url>
   <loc>/blog.html</loc>
-  <lastmod>2014-01-28</lastmod>
+  <lastmod>2014-01-29</lastmod>
 </url>
 </urlset>
