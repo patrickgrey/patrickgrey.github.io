@@ -18,11 +18,16 @@
         <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
 
+        <!-- build:css({app,.tmp}) /css/main.css -->
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
+        <!-- endbuild -->
 
+        <!-- build:css({app,.tmp}) /css/ie8.css -->
         <!--[if lt IE 9]>
-        <link rel="stylesheet" href="/css/ie8.css">
+            <link rel="stylesheet" href="/css/ie8.css">
         <![endif]-->
+        <!-- endbuild -->
 
 
         <!-- Launch Icon links [Start] -->
@@ -150,7 +155,7 @@
 <span class="nx">ga</span><span class="p">(</span><span class="s1">&#39;send&#39;</span><span class="p">,</span> <span class="s1">&#39;pageview&#39;</span><span class="p">);</span>
 </code></pre></div>
 
-<p>I have a Jekyll generated site. I build and upload it to my hosting (patrickgrey.co.uk). I also keep a backup on GitHub. Since it&#39;s there I thought, why not make it a GitHub Pages site as well? So I did (patrickgrey.github.io).</p>
+<p>I have a Jekyll generated site. I build and upload it to my hosting (patrickgrey.co.uk). I also keep a backup on GitHub. Since it&#39;s there I thought, why not make it a GitHub Pages site as well? So I did (patrickgrey.github.io). This lets me test run updates on github before launching on the live website.</p>
 
 <p>The problem was I wanted to use Google Analytics for each one to see who was poking their nose in ;-) The manual approach would have been to comment out one account UA id and uncomment the other, recompile the Jekyll site and upload/push. The code above means I can use the same code base for both sites. An edge case but it may come in handy.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geekery | ]]></title>
   <link href="/blog/categories/geekery/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-29T11:03:20+00:00</updated>
+  <updated>2014-01-30T14:27:28+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -40,7 +40,7 @@
 <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
 </code></pre></div></p>
 
-<p>I have a Jekyll generated site. I build and upload it to my hosting (patrickgrey.co.uk). I also keep a backup on GitHub. Since it&#39;s there I thought, why not make it a GitHub Pages site as well? So I did (patrickgrey.github.io).</p>
+<p>I have a Jekyll generated site. I build and upload it to my hosting (patrickgrey.co.uk). I also keep a backup on GitHub. Since it&#39;s there I thought, why not make it a GitHub Pages site as well? So I did (patrickgrey.github.io). This lets me test run updates on github before launching on the live website.</p>
 
 <p>The problem was I wanted to use Google Analytics for each one to see who was poking their nose in ;-) The manual approach would have been to comment out one account UA id and uncomment the other, recompile the Jekyll site and upload/push. The code above means I can use the same code base for both sites. An edge case but it may come in handy.</p>
 ]]></content>

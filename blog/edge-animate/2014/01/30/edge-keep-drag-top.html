@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Patrick Grey: blog.</title>
+        <title>Edge Animate Tip: Keeping Objects on Top</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -125,101 +125,38 @@
 
                         <!-- Note, should blog links show categories? -->
 
-                                            <h2>Blog</h2>
-                    <ul class="blog-post-links">
+                                    <h2>Edge Animate Tip: Keeping Objects on Top</h2>
 
-                        <!-- Note, should blog links show categories? -->
+            <p class="blog-post-link-date-para"><small class="blog-post-link-date">30 January 2014</small></p>
 
-                        
-<div class="pagination"><p>
-  
-    <a href="/blog/page2">&laquo; Prev</a>
-  
+            <p class="blog-post-read-time-para"><small>Reading time ~2 min | Categories:
+            
+                <a href="/blog/categories/edge-animate">edge-animate</a>&nbsp;
+            
+            </small></p>
+            <div class="post">
+            <p>I wanted to create a drag and drop interaction in Edge Animate (EA). I had the problem that when an object began dragging across the page, it would hide behind other objects.</p>
 
-  
-    
-      <a href="/blog/index.html">1</a>
-    
-  
-    
-      <a href="/blog/page2">2</a>
-    
-  
-    
-      <em>3</em>
-    
-  
+<p>This is because the other drag objects have a higher z-index. To fix it, do the following:</p>
 
-  
-    <span>Next &raquo;</span>
-  
-</p></div>
+<p>First, add a class to each drag object. Then add the following code</p>
 
+<div class="highlight"><pre><code class="javascript"><span class="c1">// on Start Drag Code...</span>
 
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drag-class&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;z-index&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">);</span>
 
+<span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;z-index&#39;</span><span class="p">,</span> <span class="s1">&#39;9999&#39;</span><span class="p">);</span>
+</code></pre></div>
 
+<p>Code explanation:</p>
 
+<ul>
+<li>On mouse down, use jQuery to send all objects matching the class you added to a lower z-index e.g. 100.</li>
+<li>Get the current object from the drag event handler you are using for your drag and drop and set the z-index of the current &#39;drag&#39; to a higher z-index.</li>
+</ul>
 
+            </div>
 
-<li class="blog-post-link">
-    <h3><a href="/blog/geekery/2013/06/13/understanding-node-npm.html">Understanding Node, NPM and Bower</a></h3>
-    <small class="blog-post-link-date">13 June 2013</small>
-    <p>I started to become aware of command line tools when I started using <a href="http://Yeoman.io" target="_blank">Yeoman.io</a>. These tools are useful and are becoming more popular in the front-end development area. I decided I needed to understand what the different tools were in order to use them properly.</p>
-
-
-</li>
-
-<li class="blog-post-link">
-    <h3><a href="/blog/geekery/2013/06/05/using-consoles-in-web-development.html">Using Consoles in Web Development</a></h3>
-    <small class="blog-post-link-date">5 June 2013</small>
-    <p>Using Command Prompt to develop stuff makes me feel like the proper programmers you would see in <a href="http://youtu.be/B8dldLG_ZhI?t=35s" target="_blank">80s movies</a>.</p>
-
-
-</li>
-
-<li class="blog-post-link">
-    <h3><a href="/blog/design/2013/06/05/patrick-grey-logo-design.html">Designing my logo</a></h3>
-    <small class="blog-post-link-date">5 June 2013</small>
-    <p>I found a good article on webdesigner depot and tried to use those rules to produce my logo:
-<a href="http://www.webdesignerdepot.com/2013/03/4-essential-rules-of-effective-logo-design/" target="_blank">webdesignerdepot.com: 4 essential rules of effective logo design</a></p>
-
-
-</li>
-
-
-
-
-
-
-<div class="pagination"><p>
-  
-    <a href="/blog/page2">&laquo; Prev</a>
-  
-
-  
-    
-      <a href="/blog/index.html">1</a>
-    
-  
-    
-      <a href="/blog/page2">2</a>
-    
-  
-    
-      <em>3</em>
-    
-  
-
-  
-    <span>Next &raquo;</span>
-  
-</p></div>
-
-
-
-
-
-                    </ul>
 
 
 

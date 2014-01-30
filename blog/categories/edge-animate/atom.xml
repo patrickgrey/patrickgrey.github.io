@@ -4,7 +4,7 @@
   <title><![CDATA[Category: edge-animate | ]]></title>
   <link href="/blog/categories/edge-animate/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-29T11:03:20+00:00</updated>
+  <updated>2014-01-30T14:27:28+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -14,11 +14,46 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Edge Animate Tip: Keeping Objects on Top]]></title>
+    <link href="/blog/edge-animate/2014/01/30/edge-keep-drag-top.html"/>
+    <updated>2014-01-30T00:00:00+00:00</updated>
+    <id>/blog/edge-animate/2014/01/30/edge-keep-drag-top</id>
+    <content type="html"><![CDATA[<p>I wanted to create a drag and drop interaction in Edge Animate (EA). I had the problem that when an object began dragging across the page, it would hide behind other objects.</p>
+
+<p>This is because the other drag objects have a higher z-index. To fix it, do the following:</p>
+
+<p>First, add a class to each drag object. Then add the following code</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// on Start Drag Code...&lt;/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">$</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;.</span><span class="nx">drag</span><span class="o">-</span><span class="kr">class</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;).</span><span class="nx">css</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">z</span><span class="o">-</span><span class="nx">index</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;,</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="mi">100</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">z</span><span class="o">-</span><span class="nx">index</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;,</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="mi">9999</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>Code explanation:</p>
+
+<ul>
+<li>On mouse down, use jQuery to send all objects matching the class you added to a lower z-index e.g. 100.</li>
+<li>Get the current object from the drag event handler you are using for your drag and drop and set the z-index of the current &#39;drag&#39; to a higher z-index.</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Workflow tips for Edge Animate]]></title>
     <link href="/blog/edge-animate/2013/12/13/edge-animate-tips.html"/>
     <updated>2013-12-13T00:00:00+00:00</updated>
     <id>/blog/edge-animate/2013/12/13/edge-animate-tips</id>
-    <content type="html"><![CDATA[<p>When entering text into the (horrifically basic) text input dialogue, on my keyboard, pressing the main Enter button adds a new line. Pressing the Enter button on the number pad shuts the input dialogue, saving my hand a trip to the mouse.</p>
+    <content type="html"><![CDATA[<p>In this document I&#39;ll list short workflow tips I find as I work with the software.</p>
+
+<ul>
+<li>When entering text into the (horrifically basic) text input dialogue, on my keyboard, pressing the main Enter button adds a new line. Pressing the Enter button on the number pad shuts the input dialogue, saving my hand a trip to the mouse.</li>
+</ul>
 ]]></content>
   </entry>
   
