@@ -4,7 +4,7 @@
   <title><![CDATA[Category: edge-animate | ]]></title>
   <link href="/blog/categories/edge-animate/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-30T14:27:28+00:00</updated>
+  <updated>2014-02-03T14:06:54+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Edge Animate Tip: Creating Triangles]]></title>
+    <link href="/blog/edge-animate/2014/02/03/edge-animate-triangles.html"/>
+    <updated>2014-02-03T00:00:00+00:00</updated>
+    <id>/blog/edge-animate/2014/02/03/edge-animate-triangles</id>
+    <content type="html"><![CDATA[<p>I find triangles pretty useful during e-learning development, mainly to use as arrow heads. I generally like to avoid using images where possible in Edge Animate (EA) (for several reasons including download speeds, ease of maintenance and easier integration with Content Management Systems i.e. fewer separate files).</p>
+
+<p>The neatest way to do this is to use pure CSS, as outlined here: <a href="http://css-tricks.com/snippets/css/css-triangle/">http://css-tricks.com/snippets/css/css-triangle/</a>.</p>
+
+<p>However, I like to have a visual placeholder on the &#39;stage&#39; when I&#39;m developing complex animations in EA. This makes positioning objects on the stage easier and also helps with future maintenance where other developers can actually see what is going on.</p>
+
+<p>To create a &#39;physical&#39; triangle, I draw a square and then set the Transform SkewX to 27 degrees and Transform SkewY to -45 degrees. You may need to play with these values.</p>
+
+<figure>
+  <img src="/blog/img/2014/feb/2014-02-03-edge-animate-triangles.png" alt="Screenshot of the skew settings in Edge Animate when creating a triangle." style="max-width:403px;">
+  <figcaption>Screenshot of the skew settings in Edge Animate when creating a triangle.</figcaption>
+</figure>
+
+<p>Now select Ctrl/Cmd+Y to turn it into a symbol. Double click to enter the symbol and set the Stage &gt; Overflow setting to &#39;hidden&#39;. Ensure the width and height settings aren&#39;t linked and then reduce the height of the symbol to half (e.g. the middle of the diamond). This effectively crops the diamond into a triangle.</p>
+
+<figure>
+  <img src="/blog/img/2014/feb/2014-02-03-edge-animate-triangles-crop.png" alt="Screenshot of the symbol stage settings to 'crop' a diamond to a triangle." style="max-width:435px;">
+  <figcaption>Screenshot of the symbol stage settings to 'crop' a diamond to a triangle.</figcaption>
+</figure>
+
+<p>You should now have a triangle that is easy to change the properties of.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Edge Animate Tip: Keeping Objects on Top]]></title>
@@ -49,7 +78,7 @@
     <link href="/blog/edge-animate/2013/12/13/edge-animate-tips.html"/>
     <updated>2013-12-13T00:00:00+00:00</updated>
     <id>/blog/edge-animate/2013/12/13/edge-animate-tips</id>
-    <content type="html"><![CDATA[<p>In this document I&#39;ll list short workflow tips I find as I work with the software.</p>
+    <content type="html"><![CDATA[<p>In this document I&#39;ll list short workflow tips I find as I work with the software. I will update it as I come across useful tips and quirks of the software.</p>
 
 <ul>
 <li>When entering text into the (horrifically basic) text input dialogue, on my keyboard, pressing the main Enter button adds a new line. Pressing the Enter button on the number pad shuts the input dialogue, saving my hand a trip to the mouse.</li>
