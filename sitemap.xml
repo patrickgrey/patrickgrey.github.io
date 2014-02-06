@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.patrickgrey.co.uk/blog/e-learning/geekery/2014/02/06/e-learning-workflow-yeoman.html</loc>
+    <lastmod>2014-02-06</lastmod>
+
+  </url>
+  <url>
     <loc>http://www.patrickgrey.co.uk/blog/edge-animate/2014/02/03/edge-animate-triangles.html</loc>
     <lastmod>2014-02-03</lastmod>
 
@@ -122,22 +127,22 @@
   </url>
 <url>
   <loc>http://www.patrickgrey.co.uk/index.html</loc>
-  <lastmod>2014-02-03</lastmod>
+  <lastmod>2014-02-06</lastmod>
 </url>
 <url>
   <loc>http://www.patrickgrey.co.uk/elearning.html</loc>
-  <lastmod>2014-02-03</lastmod>
+  <lastmod>2014-02-06</lastmod>
 </url>
 <url>
   <loc>http://www.patrickgrey.co.uk/webapps.html</loc>
-  <lastmod>2014-02-03</lastmod>
+  <lastmod>2014-02-06</lastmod>
 </url>
 <url>
   <loc>http://www.patrickgrey.co.uk/websites.html</loc>
-  <lastmod>2014-02-03</lastmod>
+  <lastmod>2014-02-06</lastmod>
 </url>
 <url>
   <loc>http://www.patrickgrey.co.uk/blog.html</loc>
-  <lastmod>2014-02-03</lastmod>
+  <lastmod>2014-02-06</lastmod>
 </url>
 </urlset>

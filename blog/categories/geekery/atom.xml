@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geekery | ]]></title>
   <link href="/blog/categories/geekery/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-02-03T14:06:54+00:00</updated>
+  <updated>2014-02-06T09:45:38+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My e-learning development set-up.]]></title>
+    <link href="/blog/e-learning/geekery/2014/02/06/e-learning-workflow-yeoman.html"/>
+    <updated>2014-02-06T00:00:00+00:00</updated>
+    <id>/blog/e-learning/geekery/2014/02/06/e-learning-workflow-yeoman</id>
+    <content type="html"><![CDATA[<p>I&#39;m currently developing a lot of Adobe Edge Animate (EA) compositions for e-learning modules. They will ultimately be deployed to a Learning Content Management System (LCMS) but I need a way to quickly review content as I develop it. EA lets you preview in the browser but I like to see content in context so I need to be able to step through different pages and topics within a module. I also like to have live-reload as I code ;-)</p>
+
+<p>This post outlines what I use and the steps I go through to set up a really nice workflow.</p>
+
+<p>I use the <a href="http://yeoman.io">yeoman.io</a> webapp generator to create a simple false module with navigation.</p>
+
+<ul>
+<li>Create a project folder and a module folder within that.</li>
+<li>Right click on module and open gitbash console at that location.</li>
+<li>Update webapp generator using <div class="highlight"><pre><code class="console"><span class="go"> npm install -g generator-webapp </span>
+</code></pre></div> (update doesn&#39;t always seem to work for me - must post issue on github).</li>
+<li>Scaffold the project using the generator: <div class="highlight"><pre><code class="console"><span class="go"> yo webapp </span>
+</code></pre></div></li>
+<li>I don&#39;t need Bootstrap but select sass/compass and modernizr.</li>
+<li>Once the scaffolding is finished, I run it: <div class="highlight"><pre><code class="console"><span class="go"> grunt serve </span>
+</code></pre></div></li>
+<li>In the app folder, I add a folder called &quot;topics&quot;. Within this I have topic folders; &quot;t1&quot;, &quot;t2&quot;, etc.</li>
+<li>I add my custom index page that includes an iframe linking to pages in the topics folder and navigation buttons.</li>
+<li>Navigation is controlled via a simple JSON model in index.html</li>
+<li>Now I can add new pages and build the module in context with the benefits of live-reload as I go.</li>
+</ul>
+
+<p>I&#39;d be happy to send anyone a copy of the navigation files, which you are free to use in any way you like. Just get in touch.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Jekyll, Google Analytics and Different Domains]]></title>

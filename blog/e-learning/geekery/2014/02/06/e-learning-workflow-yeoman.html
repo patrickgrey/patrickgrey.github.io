@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Category: e-learning</title>
+        <title>My e-learning development set-up.</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -120,60 +120,48 @@
 
                         <!-- Note, should blog links show categories? -->
 
-                                            <h2>Category: e-learning</h2>
-                    <ul class="blog-post-links">
-                    
+                                    <h2>My e-learning development set-up.</h2>
 
+            <p class="blog-post-link-date-para"><small class="blog-post-link-date">6 February 2014</small></p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/e-learning/geekery/2014/02/06/e-learning-workflow-yeoman.html">My e-learning development set-up.</a></h3>
-                            <small class="blog-post-link-date">6 February 2014</small>
-                            <p>I'm currently developing a lot of Adobe Edge Animate (EA) compositions for e-learning modules. They will ultimately be deployed to a Learning Content Management System (LCMS) but I need a way to quickly review content as I develop it. EA lets you preview in the browser but I like to see content in context so I need to be able to step through different pages and topics within a module. I also like to have live-reload as I code ;-)
+            <p class="blog-post-read-time-para"><small>Reading time ~3 min | Categories:
+            
+                <a href="/blog/categories/e-learning">e-learning</a>&nbsp;
+            
+                <a href="/blog/categories/geekery">geekery</a>&nbsp;
+            
+            </small></p>
+            <div class="post">
+            <p>I&#39;m currently developing a lot of Adobe Edge Animate (EA) compositions for e-learning modules. They will ultimately be deployed to a Learning Content Management System (LCMS) but I need a way to quickly review content as I develop it. EA lets you preview in the browser but I like to see content in context so I need to be able to step through different pages and topics within a module. I also like to have live-reload as I code ;-)</p>
 
-</p>
-                        </li>
-                    
+<p>This post outlines what I use and the steps I go through to set up a really nice workflow.</p>
 
+<p>I use the <a href="http://yeoman.io">yeoman.io</a> webapp generator to create a simple false module with navigation.</p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/case-study/e-learning/2014/01/11/case-elearning-nmo-atfcm-intro-e.html">Case Study: Introduction to Air Traffic Flow and Capacity Management (ATFCM)</a></h3>
-                            <small class="blog-post-link-date">11 January 2014</small>
-                            <p>The objective of ATFCM is to optimise traffic flows according to air traffic control capacity while enabling airlines to operate safe and efficient flights. I was asked to review  an existing ATFCM course and translate the content into a tablet friendly format.
+<ul>
+<li>Create a project folder and a module folder within that.</li>
+<li>Right click on module and open gitbash console at that location.</li>
+<li>Update webapp generator using 
+<div class="highlight"><pre><code class="console"><span class="go"> npm install -g generator-webapp </span>
+</code></pre></div>
+(update doesn&#39;t always seem to work for me - must post issue on github).</li>
+<li><p>Scaffold the project using the generator: 
+<div class="highlight"><pre><code class="console"><span class="go"> yo webapp </span>
+</code></pre></div></p></li>
+<li><p>I don&#39;t need Bootstrap but select sass/compass and modernizr.</p></li>
+<li><p>Once the scaffolding is finished, I run it: 
+<div class="highlight"><pre><code class="console"><span class="go"> grunt serve </span>
+</code></pre></div></p></li>
+<li><p>In the app folder, I add a folder called &quot;topics&quot;. Within this I have topic folders; &quot;t1&quot;, &quot;t2&quot;, etc.</p></li>
+<li><p>I add my custom index page that includes an iframe linking to pages in the topics folder and navigation buttons.</p></li>
+<li><p>Navigation is controlled via a simple JSON model in index.html</p></li>
+<li><p>Now I can add new pages and build the module in context with the benefits of live-reload as I go.</p></li>
+</ul>
 
-</p>
-                        </li>
-                    
+<p>I&#39;d be happy to send anyone a copy of the navigation files, which you are free to use in any way you like. Just get in touch.</p>
 
+            </div>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/case-study/e-learning/2014/01/11/case-elearning-ht.html">Case Study: Headings Tutor</a></h3>
-                            <small class="blog-post-link-date">11 January 2014</small>
-                            <p>This is an HTML5 game that helps users learn about vectoring aircraft in a fun way.
-
-</p>
-                        </li>
-                    
-
-
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/case-study/e-learning/2014/01/11/case-elearning-consult.html">Case Study: E-learning Strategy Consultation</a></h3>
-                            <small class="blog-post-link-date">11 January 2014</small>
-                            <p>I like to keep clients informed of the latest trends in e-learning and general web development. In 2013 Eurocontrol were still developing content in Flash and their systems were all based around desktop delivery. I suggested they needed to urgently start thinking about catering for non-desktop devices.
-
-</p>
-                        </li>
-                    
-
-
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/case-study/e-learning/2014/01/11/case-elearning-acdm.html">Case Study: Airport Collaborative Decision Making (A-CDM)</a></h3>
-                            <small class="blog-post-link-date">11 January 2014</small>
-                            <p>This is the largest course I have completed single-handedly. It contains over 10 hours of learning. I was tasked with educational design, technical design and development (including editing several hours of video footage) and deployment.
-
-</p>
-                        </li>
-                    
-                    </ul>
 
 
 
