@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geekery | ]]></title>
   <link href="/blog/categories/geekery/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-02-06T09:45:38+00:00</updated>
+  <updated>2014-02-06T13:46:51+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -38,6 +38,16 @@
 <li>I add my custom index page that includes an iframe linking to pages in the topics folder and navigation buttons.</li>
 <li>Navigation is controlled via a simple JSON model in index.html</li>
 <li>Now I can add new pages and build the module in context with the benefits of live-reload as I go.</li>
+<li>Next I set the project up as a git repository so I have version control: <div class="highlight"><pre><code class="console"><span class="go"> git init </span>
+</code></pre></div> on the module folder.</li>
+<li>I create a repo on github or (more often with projects for clients) a private repo on bitbucket.</li>
+<li>Then add the remote repo to the local one, add the files, commit and push <div class="highlight"><pre><code class="console"><span class="go"> git remote add origin https://patrickgrey@bitbucket.org/patrickgrey/ians2014fam.git</span>
+<span class="go">git add -A</span>
+<span class="go">git commit -m &amp;quot;Scaffolding files created&amp;quot;</span>
+<span class="go">git push -u origin master </span>
+</code></pre></div></li>
+<li>I customise the Gruntfile.js a little for my own needs e.g. the topics folder needs to be copied to distribution and I comment out HTML compression task as I like to be able to read the output.</li>
+<li>Finally, I open the module folder in Sublime Text and save it as a project. I add the project files to the .gitignore file.</li>
 </ul>
 
 <p>I&#39;d be happy to send anyone a copy of the navigation files, which you are free to use in any way you like. Just get in touch.</p>

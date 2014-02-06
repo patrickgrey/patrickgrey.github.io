@@ -124,7 +124,7 @@
 
             <p class="blog-post-link-date-para"><small class="blog-post-link-date">6 February 2014</small></p>
 
-            <p class="blog-post-read-time-para"><small>Reading time ~3 min | Categories:
+            <p class="blog-post-read-time-para"><small>Reading time ~4 min | Categories:
             
                 <a href="/blog/categories/e-learning">e-learning</a>&nbsp;
             
@@ -156,6 +156,19 @@
 <li><p>I add my custom index page that includes an iframe linking to pages in the topics folder and navigation buttons.</p></li>
 <li><p>Navigation is controlled via a simple JSON model in index.html</p></li>
 <li><p>Now I can add new pages and build the module in context with the benefits of live-reload as I go.</p></li>
+<li><p>Next I set the project up as a git repository so I have version control: 
+<div class="highlight"><pre><code class="console"><span class="go"> git init </span>
+</code></pre></div>
+on the module folder.</p></li>
+<li><p>I create a repo on github or (more often with projects for clients) a private repo on bitbucket.</p></li>
+<li><p>Then add the remote repo to the local one, add the files, commit and push 
+<div class="highlight"><pre><code class="console"><span class="go"> git remote add origin https://patrickgrey@bitbucket.org/patrickgrey/ians2014fam.git</span>
+<span class="go">git add -A</span>
+<span class="go">git commit -m &quot;Scaffolding files created&quot;</span>
+<span class="go">git push -u origin master </span>
+</code></pre></div></p></li>
+<li><p>I customise the Gruntfile.js a little for my own needs e.g. the topics folder needs to be copied to distribution and I comment out HTML compression task as I like to be able to read the output.</p></li>
+<li><p>Finally, I open the module folder in Sublime Text and save it as a project. I add the project files to the .gitignore file.</p></li>
 </ul>
 
 <p>I&#39;d be happy to send anyone a copy of the navigation files, which you are free to use in any way you like. Just get in touch.</p>
