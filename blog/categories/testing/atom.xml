@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: testing | ]]></title>
+  <link href="/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-02-12T23:34:00+00:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
+    
+  </author>
+  <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using CasperJS in a Yeoman Workflow to Test for 404s on a Jekyll Site.]]></title>
+    <link href="/blog/geekery/testing/2014/02/12/casperjs-yeoman-jekyll.html"/>
+    <updated>2014-02-12T00:00:00+00:00</updated>
+    <id>/blog/geekery/testing/2014/02/12/casperjs-yeoman-jekyll</id>
+    <content type="html"><![CDATA[<p>I use the <a href="https://github.com/robwierzbowski/generator-jekyllrb" title="The Yeoman Jekyll Generator GitHub page.">Yeoman Jekyll Generator</a> to livereload and build my personal site. I love the automation. I&#39;ve been wanting to introduce testing to my workflow for some time and, for a front-end developer, <a href="http://casperjs.org/">CasperJS</a> looked like a good fit. This post outlines the steps I took to integrate a test for broken links on my site into my Yeoman workflow.</p>
+
+<p>I&#39;d love to hear of any improvements or alternative approaches. All the source files for my personal site are on GitHub at <a href="https://github.com/patrickgrey/patrickgrey.1.1">https://github.com/patrickgrey/patrickgrey.1.1</a> if you want to take a look.</p>
+
+<p>First I installed <a href="http://phantomjs.org/download.html">PhantomJS</a> (I&#39;m on Windows to I downloaded the exe, saved it to C:\bin\phantomjs, then added that to my $PATH). Then I <a href="http://docs.casperjs.org/en/latest/installation.html#installing-from-npm">installed CasperJS</a> using NPM.</p>
+
+<p>Next I created a test folder (&quot;test_casper&quot;) at the root of my project to keep testing separate from site generation. I split my test files into a logical set as suggested at <a href="http://developer.helpscout.net/blog/functional-testing-casperjs/#toc_13">http://developer.helpscout.net/blog/functional-testing-casperjs/#toc_13</a> and created a simple test (like the one <a href="http://docs.casperjs.org/en/latest/testing.html#browser-tests">here</a>) to check it was working. I ran this from the console.</p>
+
+<p>The next challenge was to test the site locally as it was generated. To do this I installed <a href="https://github.com/iamchrismiller/grunt-casper">grunt-casper</a> so that I could run casper as a task from my grunt file.</p>
+
+<p>This is the task configuration:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">uiTest</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">test_casper</span><span class="o">/</span><span class="nx">test</span><span class="p">.</span><span class="nx">js</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;],</span>
+        <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="nx">test</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>and this is the task call I put in the watch configuration:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+        <span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">%=</span> <span class="nx">yeoman</span><span class="p">.</span><span class="nx">app</span> <span class="o">%&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="sr">/&lt;strong&gt;/</span><span class="o">*</span><span class="p">.{</span><span class="nx">html</span><span class="p">,</span><span class="nx">yml</span><span class="p">,</span><span class="nx">md</span><span class="p">,</span><span class="nx">mkd</span><span class="p">,</span><span class="nx">markdown</span><span class="p">}</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;,</span>
+        <span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">test_casper</span><span class="o">/&lt;</span><span class="sr">/strong&gt;/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span>
+    <span class="p">],</span>
+    <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">casper</span><span class="o">:</span><span class="nx">uiTest</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;]</span>
+<span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>Now, when I run &quot;grunt serve&quot; and then make a change to a watched file, the casperJS test is called each time. Running a test on each save is useful when developing my test but once the test is good, I&#39;ll comment it out and the next job is to run the test once the site is built for deployment.</p>
+
+<p>The test itself checks all internal links (i.e. those on http://127.0.0.1:9000/) and has been useful for internal links I put in posts or navigation and have since changed. The test itself was based on the really useful script I found here: <a href="http://planzero.org/blog/2013/03/07/spidering_the_web_with_casperjs">http://planzero.org/blog/2013/03/07/spidering<em>the</em>web<em>with</em>casperjs</a>. You can see the adapted version at <a href="https://github.com/patrickgrey/patrickgrey.1.1/blob/master/test_casper/checkForBrokenLinks.js">https://github.com/patrickgrey/patrickgrey.1.1/blob/master/test_casper/checkForBrokenLinks.js</a>.</p>
+
+<p>Once I get deployment tests up and running, the next step for me is to try and use a Continuous Integration platform like <a href="https://www.codeship.io/">https://www.codeship.io/</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

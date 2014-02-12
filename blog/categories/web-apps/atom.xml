@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web-apps | ]]></title>
   <link href="/blog/categories/web-apps/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-02-06T13:46:51+00:00</updated>
+  <updated>2014-02-12T23:34:00+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -112,7 +112,7 @@
     <link href="/blog/case-study/web-apps/2014/01/11/case-fple.html"/>
     <updated>2014-01-11T00:00:00+00:00</updated>
     <id>/blog/case-study/web-apps/2014/01/11/case-fple</id>
-    <content type="html"><![CDATA[<p><a href="/blog/case-study/2014/01/10/case-fpl.html" title="Select to read a short case study of the Flight Plan Guide V1.0 web application.">Version 1.0</a> of the tool was so popular Eurocontrol decided to expand the app&#39;s remit. They wanted to add a section allowing users to explore errors they could expect to receive if the Flight Plan had been incorrectly filed.</p>
+    <content type="html"><![CDATA[<p><a href="/blog/case-study/web-apps/2014/01/10/case-fpl.html" title="Select to read a short case study of the Flight Plan Guide V1.0 web application.">Version 1.0</a> of the tool was so popular Eurocontrol decided to expand the app&#39;s remit. They wanted to add a section allowing users to explore errors they could expect to receive if the Flight Plan had been incorrectly filed.</p>
 
 <figure>
   <img src="/blog/img/2014/jan/2014-01-11-case-fple.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0." style="max-width:550px;">
@@ -234,7 +234,7 @@ LMS API and create a bridge for the Custom Groups feature.</p>
     <link href="/blog/case-study/web-apps/2014/01/10/case-fpl.html"/>
     <updated>2014-01-10T00:00:00+00:00</updated>
     <id>/blog/case-study/web-apps/2014/01/10/case-fpl</id>
-    <content type="html"><![CDATA[<p><strong>Note: these applications have been superceeded by version 2.0. You can read about that <a href="/blog/case-study/2014/01/11/case-fple.html" title="Select to read a short case study of the FPLE web application.">here</a>.</strong></p>
+    <content type="html"><![CDATA[<p><strong>Note: these applications have been superceeded by version 2.0. You can read about that <a href="/blog/case-study/web-apps/2014/01/11/case-fple.html" title="Select to read a short case study of the FPLE web application.">here</a>.</strong></p>
 
 <p>In 2012 the format of Flight Plans was to be updated. To prepare Flight Plan users across Europe for the change in 2011, Eurocontrol commissioned me to create a database application to allow users to explore the changes.</p>
 

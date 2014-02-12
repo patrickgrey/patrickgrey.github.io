@@ -4,7 +4,7 @@
   <title><![CDATA[Category: case-study | ]]></title>
   <link href="/blog/categories/case-study/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-02-06T13:46:51+00:00</updated>
+  <updated>2014-02-12T23:34:00+00:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -106,7 +106,7 @@ I&#39;m delighted with the site and it has helped my business with a high search
 
 <figure>
   <img src="/blog/img/2014/jan/2014-01-11-case-website-barnes-tennis.jpg" alt="Screenshot of the BarnesTennisClub.co.uk website." style="max-width:476px;">
-  <figcaption>Screenshot of the JockGordon.co.uk website viewed on a mobile device.</figcaption>
+  <figcaption>Screenshot of the barnestennisclub.co.uk website viewed on a mobile device.</figcaption>
 </figure>
 
 <p>You can visit <a href="http://www.barnestennisclub.co.uk" title="Open the BarnesTennisClub.co.uk website in a new window." target="_blank">BarnesTennisClub.co.uk here</a>.</p>
@@ -235,7 +235,7 @@ Thank you for all your time spent on this and I&#39;m sure our Club will prosper
     <link href="/blog/case-study/web-apps/2014/01/11/case-fple.html"/>
     <updated>2014-01-11T00:00:00+00:00</updated>
     <id>/blog/case-study/web-apps/2014/01/11/case-fple</id>
-    <content type="html"><![CDATA[<p><a href="/blog/case-study/2014/01/10/case-fpl.html" title="Select to read a short case study of the Flight Plan Guide V1.0 web application.">Version 1.0</a> of the tool was so popular Eurocontrol decided to expand the app&#39;s remit. They wanted to add a section allowing users to explore errors they could expect to receive if the Flight Plan had been incorrectly filed.</p>
+    <content type="html"><![CDATA[<p><a href="/blog/case-study/web-apps/2014/01/10/case-fpl.html" title="Select to read a short case study of the Flight Plan Guide V1.0 web application.">Version 1.0</a> of the tool was so popular Eurocontrol decided to expand the app&#39;s remit. They wanted to add a section allowing users to explore errors they could expect to receive if the Flight Plan had been incorrectly filed.</p>
 
 <figure>
   <img src="/blog/img/2014/jan/2014-01-11-case-fple.jpg" alt="Screenshot of the Flight Plan Guide Database Application v2.0." style="max-width:550px;">

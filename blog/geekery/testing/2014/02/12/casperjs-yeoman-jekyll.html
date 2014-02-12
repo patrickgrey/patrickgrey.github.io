@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <title>Category: geekery</title>
+        <title>Using CasperJS in a Yeoman Workflow to Test for 404s on a Jekyll Site.</title>
 
 
         <meta name="description" content="Portfolio site of Patrick Grey: web developer, e-learning specialist and connoisseur of cheap beer." />
@@ -120,60 +120,59 @@
 
                         <!-- Note, should blog links show categories? -->
 
-                                            <h2>Category: geekery</h2>
-                    <ul class="blog-post-links">
-                    
+                                    <h2>Using CasperJS in a Yeoman Workflow to Test for 404s on a Jekyll Site.</h2>
 
+            <p class="blog-post-link-date-para"><small class="blog-post-link-date">12 February 2014</small></p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/geekery/testing/2014/02/12/casperjs-yeoman-jekyll.html">Using CasperJS in a Yeoman Workflow to Test for 404s on a Jekyll Site.</a></h3>
-                            <small class="blog-post-link-date">12 February 2014</small>
-                            <p>I use the [Yeoman Jekyll Generator](https://github.com/robwierzbowski/generator-jekyllrb "The Yeoman Jekyll Generator GitHub page.") to livereload and build my personal site. I love the automation. I've been wanting to introduce testing to my workflow for some time and, for a front-end developer, [CasperJS](http://casperjs.org/) looked like a good fit. This post outlines the steps I took to integrate a test for broken links on my site into my Yeoman workflow.
+            <p class="blog-post-read-time-para"><small>Reading time ~5 min | Categories:
+            
+                <a href="/blog/categories/geekery">geekery</a>&nbsp;
+            
+                <a href="/blog/categories/testing">testing</a>&nbsp;
+            
+            </small></p>
+            <div class="post">
+            <p>I use the <a href="https://github.com/robwierzbowski/generator-jekyllrb" title="The Yeoman Jekyll Generator GitHub page.">Yeoman Jekyll Generator</a> to livereload and build my personal site. I love the automation. I&#39;ve been wanting to introduce testing to my workflow for some time and, for a front-end developer, <a href="http://casperjs.org/">CasperJS</a> looked like a good fit. This post outlines the steps I took to integrate a test for broken links on my site into my Yeoman workflow.</p>
 
-</p>
-                        </li>
-                    
+<p>I&#39;d love to hear of any improvements or alternative approaches. All the source files for my personal site are on GitHub at <a href="https://github.com/patrickgrey/patrickgrey.1.1">https://github.com/patrickgrey/patrickgrey.1.1</a> if you want to take a look.</p>
 
+<p>First I installed <a href="http://phantomjs.org/download.html">PhantomJS</a> (I&#39;m on Windows to I downloaded the exe, saved it to C:\bin\phantomjs, then added that to my $PATH). Then I <a href="http://docs.casperjs.org/en/latest/installation.html#installing-from-npm">installed CasperJS</a> using NPM.</p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/e-learning/geekery/2014/02/06/e-learning-workflow-yeoman.html">My e-learning development set-up.</a></h3>
-                            <small class="blog-post-link-date">6 February 2014</small>
-                            <p>I'm currently developing a lot of Adobe Edge Animate (EA) compositions for e-learning modules. They will ultimately be deployed to a Learning Content Management System (LCMS) but I need a way to quickly review content as I develop it. EA lets you preview in the browser but I like to see content in context so I need to be able to step through different pages and topics within a module. I also like to have live-reload as I code ;-)
+<p>Next I created a test folder (&quot;test_casper&quot;) at the root of my project to keep testing separate from site generation. I split my test files into a logical set as suggested at <a href="http://developer.helpscout.net/blog/functional-testing-casperjs/#toc_13">http://developer.helpscout.net/blog/functional-testing-casperjs/#toc_13</a> and created a simple test (like the one <a href="http://docs.casperjs.org/en/latest/testing.html#browser-tests">here</a>) to check it was working. I ran this from the console.</p>
 
-</p>
-                        </li>
-                    
+<p>The next challenge was to test the site locally as it was generated. To do this I installed <a href="https://github.com/iamchrismiller/grunt-casper">grunt-casper</a> so that I could run casper as a task from my grunt file.</p>
 
+<p>This is the task configuration:</p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/geekery/jekyll/2014/01/29/jekyll-google-analytics-different-domain.html">Jekyll, Google Analytics and Different Domains</a></h3>
-                            <small class="blog-post-link-date">29 January 2014</small>
-                            <p>The code below switches Google Analytic account based on the current domain. I wanted to do this to avoid having to change the code and recompile each time I wanted to upload to a backup site. This code has not been widely tested yet so do so before putting into a production site.
+<div class="highlight"><pre><code class="javascript"><span class="nx">casper</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">uiTest</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;test_casper/test.js&#39;</span><span class="p">],</span>
+        <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="nx">test</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
-</p>
-                        </li>
-                    
+<p>and this is the task call I put in the watch configuration:</p>
 
+<div class="highlight"><pre><code class="javascript"><span class="nx">casper</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;&lt;%= yeoman.app %&gt;/**/*.{html,yml,md,mkd,markdown}&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;test_casper/**/*.js&#39;</span>
+    <span class="p">],</span>
+    <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;casper:uiTest&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/geekery/2013/06/13/understanding-node-npm.html">Understanding Node, NPM and Bower</a></h3>
-                            <small class="blog-post-link-date">13 June 2013</small>
-                            <p>I started to become aware of command line tools when I started using <a href="http://Yeoman.io" target="_blank">Yeoman.io</a>. These tools are useful and are becoming more popular in the front-end development area. I decided I needed to understand what the different tools were in order to use them properly.
+<p>Now, when I run &quot;grunt serve&quot; and then make a change to a watched file, the casperJS test is called each time. Running a test on each save is useful when developing my test but once the test is good, I&#39;ll comment it out and the next job is to run the test once the site is built for deployment.</p>
 
-</p>
-                        </li>
-                    
+<p>The test itself checks all internal links (i.e. those on http://127.0.0.1:9000/) and has been useful for internal links I put in posts or navigation and have since changed. The test itself was based on the really useful script I found here: <a href="http://planzero.org/blog/2013/03/07/spidering_the_web_with_casperjs">http://planzero.org/blog/2013/03/07/spidering<em>the</em>web<em>with</em>casperjs</a>. You can see the adapted version at <a href="https://github.com/patrickgrey/patrickgrey.1.1/blob/master/test_casper/checkForBrokenLinks.js">https://github.com/patrickgrey/patrickgrey.1.1/blob/master/test_casper/checkForBrokenLinks.js</a>.</p>
 
+<p>Once I get deployment tests up and running, the next step for me is to try and use a Continuous Integration platform like <a href="https://www.codeship.io/">https://www.codeship.io/</a>.</p>
 
-                        <li class="blog-post-link">
-                            <h3><a href="/blog/geekery/2013/06/05/using-consoles-in-web-development.html">Using Consoles in Web Development</a></h3>
-                            <small class="blog-post-link-date">5 June 2013</small>
-                            <p>Using Command Prompt to develop stuff makes me feel like the proper programmers you would see in <a href="http://youtu.be/B8dldLG_ZhI?t=35s" target="_blank">80s movies</a>.
+            </div>
 
-</p>
-                        </li>
-                    
-                    </ul>
 
 
 
