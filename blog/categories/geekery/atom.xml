@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geekery | ]]></title>
   <link href="/blog/categories/geekery/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-09-01T21:10:46+01:00</updated>
+  <updated>2014-09-02T12:02:06+01:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Patrick Grey", "email"=>"websemantic@yahoo.co.uk"}]]></name>
@@ -12,6 +12,149 @@
   </author>
   <generator uri="https://github.com/recurser/jekyll-plugins">Recurser</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CasperJS, the friendly front-end testing ghost.]]></title>
+    <link href="/blog/geekery/javascript/2014/09/02/casperjs-the-friendly-front-end-ghost.html"/>
+    <updated>2014-09-02T00:00:00+01:00</updated>
+    <id>/blog/geekery/javascript/2014/09/02/casperjs-the-friendly-front-end-ghost</id>
+    <content type="html"><![CDATA[<p>A client recently introduced a new requirement that all applications must have documented testing
+routines that should be manually completed before they are deployed.</p>
+
+<p>That sounded like a lot of manual effort and I had read about automated front-end testing with
+CasperJS. This was my excuse to finally try it out properly.</p>
+
+<p>This blog records how I got CasperJS up and running on my Windows 8.1 machine - not as difficult as
+I feared! I&#39;ll also note down my thinking as I learn how to write tests before my &#39;how do I do that&#39;
+questions become, &#39;well that&#39;s obvious, I always new that and don&#39;t need to explain it&#39; type learning.</p>
+
+<p>I should say that it took me a while to understand what CapserJS did. Basically, it launches a
+&#39;headless browser&#39; against which we can test results (my understanding or headless is like a
+browser that takes normal requests processes pages but doesn&#39;t display anything in an actual
+browser - it all happens in memory, hence it is run from the command line). My understanding
+may well be wrong!</p>
+
+<h3>Installation</h3>
+
+<p>CasperJS depends on PhantomJS and Python.</p>
+
+<p>I downloaded and installed the 2.7.8 version Windows installer from
+<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>. I would usually try the more
+advanced version but my blog runs on Jekyll and the pygments code highlighting will not work with
+version 3+.</p>
+
+<p>I found that the installer did not write to my PATH (meaning my consoles would not be able to find it).
+So I appended C:\Python27;C:\Python27\Scripts; to my PATH. If you are not sure about this, try
+the following link:
+<a href="http://www.computerhope.com/issues/ch000549.htm">http://www.computerhope.com/issues/ch000549.htm</a>.</p>
+
+<p>PhantomJS lets you download a zip that contains an exe file
+ <a href="http://phantomjs.org/download.html">http://phantomjs.org/download.html</a>. I copied the contents of the
+zip to C:\ and then added the following to PATH: C:\phantomjs;</p>
+
+<p>Finally, I installed CasperJS using NPM (this assumes you have installed Node:
+<a href="http://nodejs.org/">http://nodejs.org/</a>) by typing the
+following into my console to install it globally:
+npm install -g casperjs</p>
+
+<p>I then added the location of the batchbin to my PATH:
+C:\Users\Patrick\AppData\Roaming\npm\node_modules\casperjs\batchbin;</p>
+
+<h3>Checking Installation</h3>
+
+<p>I added a &#39;tests&#39; directory to the scripts folder of my application (I&#39;ve decided to ship them as
+well so the client has the source code for tests). I then created a simple JavaScript file and called it
+installCheck.js containing the following code:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">casper</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">casper</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;).</span><span class="nx">create</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">http</span><span class="o">:</span><span class="c1">//casperjs.org/&amp;#39;, function() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getTitle</span><span class="p">());</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span><span class="p">.</span><span class="nx">thenOpen</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">http</span><span class="o">:</span><span class="c1">//phantomjs.org&amp;#39;, function() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getTitle</span><span class="p">());</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>Next, I navigate to the &#39;tests&#39; folder in Explorer and right click on it to open Git Bash (my
+console of choice). Enter &quot;casperjs installCheck.js&quot; and press enter.</p>
+
+<p>At first I didn&#39;t think it was working as it just returns to a new line, looking like it&#39;s ready to
+take another command - however, after a few seconds (as it gets requests back from the sites), the titles
+of each page are printed out! It works! Press ctrl+c to escape the routine.</p>
+
+<h3>First Tests</h3>
+
+<p>I&#39;m testing an ASP.NET application. The search page posts back to itself and returns a list of aircraft
+based on filters. If a specific aircraft is selected, a new page is loaded with details of that
+specific aircarft.</p>
+
+<p>The search page has three basic filters (one drop down and two inputs) and 15 advanced filters.
+12 of the advanced filters also have an operator drop down with =, &gt;=, &lt;=, +/-. If the final
+value is selected an extra input appears so the user can enter a range.</p>
+
+<p>So, how do I test this lot?</p>
+
+<p>The most obvious was to check that if a basic filter has a valid value to make sure that aircraft
+are returned. Filling in the form was pretty simple:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">casper</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">casper</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;).</span><span class="nx">create</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:56689/default.aspx&amp;#39;, function() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">form</span><span class="err">#</span><span class="nx">wsBasicSearchForm</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;,</span> <span class="p">{</span> <span class="nx">NameFilter</span><span class="o">:</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">air</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span> <span class="p">},</span> <span class="kc">true</span><span class="p">);</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>The fill function takes three parameters: the form found via CSS3 query selectors, a field name
+with a value to enter and a boolean to submit if true.</p>
+
+<p>Then I would check that an HTML &#39;strong&#39; element that displays the aircraft count had a count
+greater than 0.</p>
+
+<p>I then made my first mistake, trying to use native JavaScript to get the inner text of the element:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">acftCount</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;).</span><span class="nx">innerHTML</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>The element search returned null. The solution was to use a Casper method:</p>
+
+<p><div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">fetchText</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;</span><span class="nx">strong</span><span class="err">#</span><span class="nx">acftCount</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">39</span><span class="p">;));</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</code></pre></div></p>
+
+<p>strong is the element type and # is the CSS3 selector for ID.</p>
+
+<p>This works! I still have a long way to go but will post this now and update later.</p>
+
+<p>the plan ahead is:</p>
+
+<ul>
+<li>write actuall pass/fail tests instead of printing out results</li>
+<li>create a suite of tests that can run across the whole application</li>
+<li>check to see how to test the admin section of the site - I will need to log in and do
+CRUD operations.</li>
+<li>In future do TDD from the start!</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using CasperJS in a Yeoman Workflow to Test for 404s on a Jekyll Site.]]></title>
@@ -174,41 +317,6 @@
 <h3>Bower</h3>
 
 <p>Bower does the same, loading all sorts of components for the front end. The article didn’t give me much of an idea of the practical potential, I need to look about more for that. Note: I can see real benefits for this like loading icon sprites (social media) or html components but I have a concern about js and css files as it seems that I have to link to each one that is installed. For performance reasons, I prefer to minify and concatenate these files for performance. Maybe I’m wrong here but this was my initial impression.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Consoles in Web Development]]></title>
-    <link href="/blog/geekery/2013/06/05/using-consoles-in-web-development.html"/>
-    <updated>2013-06-05T00:00:00+01:00</updated>
-    <id>/blog/geekery/2013/06/05/using-consoles-in-web-development</id>
-    <content type="html"><![CDATA[<p>Using Command Prompt to develop stuff makes me feel like the proper programmers you would see in <a href="http://youtu.be/B8dldLG_ZhI?t=35s" target="_blank">80s movies</a>.</p>
-
-<p><img src="/blog/img/2013/warGames.jpg" alt="Screenshot of War Games movie asking computer to play Thermonuclear war." width="100%" /></p>
-
-<p>Typing weird runes into a basic interface and then long lists speeding down the screen show that something important and impressive is happening. It looks like you have the capability to start World War 3 using only your ZX Spectrum. In reality, all you are doing is playing with advanced lego. You are plugging together small, focussed tools that other geniuses have built to improve your workflow.</p>
-
-<p>I ignored the console for years. I didn&#39;t know how to use it. If they can&#39;t be bothered putting a GUI on it, why should I?</p>
-
-<p>It turns out the beauty of the console is its simplicity. It forces you to keep software concepts and processes in your head. This gives you a better understanding of how things work and lets you work with the tools better and faster.</p>
-
-<p>I use the console to manage GIT repositories and install, update and run web development frameworks like <a href="http://Yeoman.io" target="_blank">Yeoman.io</a> and <a href="http://DocPad.org" target="_blank">DocPad.org</a>.</p>
-
-<p>All my projects are now backed up online and have version control thanks to GIT and <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>. This means I can work on the same project on different machines, safe in the knowledge that I have a backup of all the versions I have made. All this for free - music to the ears of this Scotsman :-) This is just an example of the possible benefits.</p>
-
-<p>With a little bit of learning I have found massive benefits to my daily work, which is why I would recommend you take the time to learn about using the console and these frameworks.</p>
-
-<p>You will find that all the cool console stuff is aimed at Macs but I mainly develop on windows machines and have got everything working that I need to.</p>
-
-<p>Try this out to get started:</p>
-
-<ul>
-<li>First learn the basics: how to navigate your file system.</li>
-<li>Then install a platform like <a href="http://nodejs.org/" target="_blank">Node.js</a> that will allow you to run these tools on it.</li>
-<li>Then install one of the tools like Yeoman and try running the basic settings. You will soon grasp the benefits.</li>
-</ul>
-
-<p>The best way to learn is to try it.</p>
 ]]></content>
   </entry>
   
